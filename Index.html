@@ -1,0 +1,2403 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>انگلیسی برای فارسی‌زبانان | English for Persian Speakers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f2f5fb; --surface:#fff; --surface-2:#f8fafc; --border:#e4e9f4;
+  --text:#141827; --muted:#69738f; --accent:#4f46e5; --accent-soft:#eef0ff;
+  --accent-2:#0ea5e9; --success:#0f9d76; --success-soft:#e6f7f1;
+  --danger:#e5484d; --danger-soft:#fdecec; --warn:#f59e0b;
+  --radius:18px; --shadow:0 4px 20px rgba(20,24,39,.06);
+  --shadow-lg:0 14px 44px rgba(20,24,39,.13);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:'Vazirmatn',system-ui,-apple-system,'Segoe UI',sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.85;font-size:15px;min-height:100vh;
+  background-image:radial-gradient(circle at 12% -10%,#e5e9ff 0,transparent 45%),
+                   radial-gradient(circle at 92% 0%,#e0f5ff 0,transparent 40%);
+  background-attachment:fixed;
+}
+.en{font-family:'Inter',system-ui,sans-serif;direction:ltr;unicode-bidi:isolate;font-weight:500}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+input{font-family:inherit}
+.shell{max-width:940px;margin:0 auto;padding:0 16px 120px}
+
+header.top{
+  position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);
+  background:rgba(242,245,251,.85);border-bottom:1px solid var(--border);
+  margin:0 -16px 18px;padding:12px 16px 10px;
+}
+.top-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px}
+.brand .logo{
+  width:36px;height:36px;border-radius:11px;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--accent),var(--accent-2));
+  color:#fff;font-family:'Inter';font-size:16px;font-weight:700;
+  box-shadow:0 6px 16px rgba(79,70,229,.32)
+}
+.brand small{display:block;font-size:11px;font-weight:500;color:var(--muted);line-height:1.3}
+.levels{display:flex;gap:6px;margin-inline-start:auto;flex-wrap:wrap}
+.chip{
+  padding:6px 13px;border-radius:99px;font-size:12.5px;font-weight:700;
+  border:1.5px solid var(--border);background:var(--surface);color:var(--muted);
+  transition:.18s;font-family:'Inter'
+}
+.chip:hover{border-color:#c7cdf0;color:var(--text)}
+.chip.on{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 5px 14px rgba(79,70,229,.28)}
+nav.tabs{display:flex;gap:4px;overflow-x:auto;margin-top:10px;padding-bottom:2px;scrollbar-width:none}
+nav.tabs::-webkit-scrollbar{display:none}
+nav.tabs button{
+  display:flex;align-items:center;gap:6px;white-space:nowrap;
+  padding:7px 12px;border-radius:11px;font-size:13px;font-weight:600;
+  color:var(--muted);transition:.16s
+}
+nav.tabs button:hover{background:#e9edf8;color:var(--text)}
+nav.tabs button.on{background:var(--surface);color:var(--accent);box-shadow:var(--shadow)}
+nav.tabs .ic{font-size:15px;line-height:1}
+
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  padding:20px;box-shadow:var(--shadow);margin-bottom:14px}
+h2.sec{font-size:19px;font-weight:800;margin-bottom:4px}
+p.sub{color:var(--muted);font-size:13.5px;margin-bottom:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:11px 20px;border-radius:13px;font-weight:700;font-size:14.5px;
+  background:var(--accent);color:#fff;transition:.16s;box-shadow:0 6px 18px rgba(79,70,229,.26)}
+.btn:hover{transform:translateY(-1px);box-shadow:0 9px 24px rgba(79,70,229,.34)}
+.btn:active{transform:translateY(0)}
+.btn.ghost{background:var(--surface);color:var(--text);border:1.5px solid var(--border);box-shadow:none}
+.btn.ghost:hover{border-color:#c7cdf0;box-shadow:var(--shadow)}
+.btn.sm{padding:8px 14px;font-size:13px;border-radius:11px}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none!important;box-shadow:none!important}
+.pill{display:inline-block;padding:3px 11px;border-radius:99px;font-size:11.5px;
+  font-weight:700;background:var(--accent-soft);color:var(--accent)}
+.pill.green{background:var(--success-soft);color:var(--success)}
+.pill.gray{background:#eef1f7;color:var(--muted)}
+
+.hero{background:linear-gradient(135deg,#4f46e5,#0ea5e9);color:#fff;border:none;
+  border-radius:22px;padding:30px 26px;margin-bottom:16px;box-shadow:0 18px 46px rgba(79,70,229,.3);
+  position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;inset-inline-end:-60px;top:-60px;width:220px;height:220px;
+  border-radius:50%;background:rgba(255,255,255,.12)}
+.hero h1{font-size:25px;font-weight:800;line-height:1.5;margin-bottom:6px;position:relative}
+.hero p{opacity:.92;font-size:14px;position:relative;max-width:600px}
+
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:16px}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:15px;padding:15px 16px;box-shadow:var(--shadow)}
+.stat b{display:block;font-size:24px;font-weight:800;font-family:'Inter';color:var(--accent);line-height:1.3}
+.stat span{font-size:12.5px;color:var(--muted)}
+
+.bar{height:7px;border-radius:99px;background:#eaeef8;overflow:hidden;margin-top:9px}
+.bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--accent),var(--accent-2));transition:width .5s cubic-bezier(.4,0,.2,1)}
+
+.toolbar{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.search{flex:1;min-width:190px;padding:11px 15px;border-radius:13px;border:1.5px solid var(--border);
+  background:var(--surface);font-size:14px;outline:none;transition:.16s}
+.search:focus{border-color:var(--accent);box-shadow:0 0 0 3.5px var(--accent-soft)}
+
+.word{background:var(--surface);border:1px solid var(--border);border-radius:15px;
+  padding:15px 17px;margin-bottom:10px;box-shadow:var(--shadow);transition:.18s}
+.word:hover{border-color:#cfd5ee;box-shadow:var(--shadow-lg)}
+.word.done{background:linear-gradient(90deg,var(--success-soft),var(--surface) 40%)}
+.word-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.word-en{font-family:'Inter';font-size:19px;font-weight:700;direction:ltr;letter-spacing:-.2px}
+.word-pr{font-size:12px;color:var(--muted);background:var(--surface-2);padding:2px 9px;border-radius:8px;border:1px solid var(--border)}
+.word-fa{font-size:16px;font-weight:700;color:var(--accent);margin-inline-start:auto}
+.spk{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;
+  background:var(--accent-soft);color:var(--accent);font-size:15px;transition:.16s;flex-shrink:0}
+.spk:hover{background:var(--accent);color:#fff}
+.spk.sm{width:28px;height:28px;font-size:13px;border-radius:9px}
+.word-ex{margin-top:10px;padding-top:10px;border-top:1px dashed var(--border);
+  font-size:13.5px;color:var(--muted)}
+.word-ex .en{color:var(--text);font-weight:500}
+.chk{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--muted);
+  font-weight:600;margin-top:10px;cursor:pointer;user-select:none;width:fit-content}
+.chk input{width:17px;height:17px;accent-color:var(--success);cursor:pointer}
+
+.acc{background:var(--surface);border:1px solid var(--border);border-radius:15px;margin-bottom:10px;box-shadow:var(--shadow);overflow:hidden}
+.acc-h{display:flex;align-items:center;gap:11px;padding:15px 17px;width:100%;text-align:right;font-weight:700;font-size:15px;transition:.15s}
+.acc-h:hover{background:var(--surface-2)}
+.acc-h .num{width:27px;height:27px;border-radius:9px;background:var(--accent-soft);color:var(--accent);
+  display:grid;place-items:center;font-family:'Inter';font-size:12.5px;font-weight:700;flex-shrink:0}
+.acc-h .arw{margin-inline-start:auto;color:var(--muted);font-size:12px;transition:.25s}
+.acc.open .arw{transform:rotate(180deg)}
+.acc-b{max-height:0;overflow:hidden;transition:max-height .35s cubic-bezier(.4,0,.2,1)}
+.acc.open .acc-b{max-height:3000px}
+.acc-inner{padding:0 17px 18px;border-top:1px solid var(--border);padding-top:14px;font-size:14px}
+.acc-inner p{margin-bottom:10px}
+.acc-inner ul{margin:0 18px 12px 0;padding-inline-start:14px}
+.acc-inner li{margin-bottom:6px}
+.eg{background:var(--surface-2);border-inline-start:3px solid var(--accent);border-radius:10px;padding:10px 14px;margin:10px 0;font-size:14px}
+.eg .en{font-weight:600;display:block;direction:ltr;text-align:left}
+.eg .fa{color:var(--muted);font-size:13px}
+.warn-box{background:#fff8ec;border:1px solid #f7e0b8;border-radius:12px;padding:11px 14px;font-size:13.5px;margin:10px 0;color:#8a5a00}
+.ok-box{background:var(--success-soft);border:1px solid #bfe8da;border-radius:12px;padding:11px 14px;font-size:13.5px;margin:10px 0;color:#0a6b51}
+
+.fc-stage{perspective:1400px;margin-bottom:16px}
+.fc{position:relative;width:100%;min-height:280px;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.4,0,.2,1);cursor:pointer}
+.fc.flip{transform:rotateY(180deg)}
+.fc-face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;
+  border-radius:22px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:28px 22px;text-align:center;box-shadow:var(--shadow-lg);border:1px solid var(--border)}
+.fc-front{background:var(--surface)}
+.fc-back{background:linear-gradient(135deg,#4f46e5,#0ea5e9);color:#fff;transform:rotateY(180deg);border:none}
+.fc-front .big{font-family:'Inter';font-size:38px;font-weight:700;direction:ltr;letter-spacing:-1px;margin-bottom:8px}
+.fc-front .pr{color:var(--muted);font-size:14px}
+.fc-front .hint{position:absolute;bottom:18px;font-size:12px;color:#aab3c9}
+.fc-back .big{font-size:27px;font-weight:800;margin-bottom:10px}
+.fc-back .ex{font-size:14px;opacity:.94;max-width:440px}
+.fc-back .ex .en{display:block;font-weight:600;margin-bottom:3px}
+.fc-back .spk2{position:absolute;top:16px;inset-inline-end:16px;width:38px;height:38px;border-radius:12px;
+  background:rgba(255,255,255,.22);color:#fff;display:grid;place-items:center;font-size:16px}
+.fc-back .spk2:hover{background:rgba(255,255,255,.36)}
+.fc-controls{display:flex;gap:9px;justify-content:center;flex-wrap:wrap}
+.fc-controls .btn{flex:1;min-width:90px;max-width:170px}
+.grade-again{background:#fff;color:var(--danger);border:1.5px solid #f6c9cb;box-shadow:none}
+.grade-again:hover{background:var(--danger-soft)}
+.grade-good{background:#fff;color:var(--warn);border:1.5px solid #f5d99b;box-shadow:none}
+.grade-good:hover{background:#fff8ec}
+.grade-easy{background:#fff;color:var(--success);border:1.5px solid #b6e5d4;box-shadow:none}
+.grade-easy:hover{background:var(--success-soft)}
+.fc-meta{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted);margin-bottom:12px;font-weight:600;flex-wrap:wrap;gap:6px}
+
+.q-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:13.5px;color:var(--muted);font-weight:600}
+.q-text{font-size:19px;font-weight:700;margin-bottom:20px;line-height:1.7}
+.opt{display:flex;align-items:center;gap:12px;width:100%;text-align:right;
+  padding:14px 17px;border-radius:14px;border:1.5px solid var(--border);
+  background:var(--surface);margin-bottom:10px;font-size:15.5px;font-weight:600;
+  transition:.16s;box-shadow:var(--shadow)}
+.opt:hover:not(.locked){border-color:var(--accent);background:var(--accent-soft);transform:translateX(-3px)}
+.opt .k{width:26px;height:26px;border-radius:8px;background:var(--surface-2);border:1px solid var(--border);
+  display:grid;place-items:center;font-family:'Inter';font-size:12.5px;font-weight:700;color:var(--muted);flex-shrink:0}
+.opt.correct{background:var(--success-soft);border-color:#9ddcc4}
+.opt.correct .k{background:var(--success);color:#fff;border-color:var(--success)}
+.opt.wrong{background:var(--danger-soft);border-color:#f3bfc1}
+.opt.wrong .k{background:var(--danger);color:#fff;border-color:var(--danger)}
+.opt.locked{cursor:default}
+.feedback{border-radius:14px;padding:14px 17px;margin-top:6px;font-weight:700;font-size:14.5px;display:flex;gap:9px;align-items:center}
+.feedback.ok{background:var(--success-soft);color:#0a6b51}
+.feedback.no{background:var(--danger-soft);color:#a32b2f}
+.result-hero{text-align:center;padding:34px 20px}
+.result-hero .score{font-family:'Inter';font-size:58px;font-weight:800;line-height:1.1;
+  background:linear-gradient(135deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.result-hero .msg{font-size:17px;font-weight:700;margin:10px 0 4px}
+.progress-line{height:7px;background:#eaeef8;border-radius:99px;overflow:hidden;margin-bottom:22px}
+.progress-line i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2));transition:width .35s}
+
+.snd{padding:0;overflow:hidden}
+.ipa{font-family:'Inter';font-size:22px;font-weight:700;color:var(--accent);background:var(--accent-soft);
+  padding:3px 14px;border-radius:11px;direction:ltr}
+.pairs{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:9px;margin-top:12px}
+.pair{display:flex;align-items:center;gap:9px;background:var(--surface-2);border:1px solid var(--border);
+  border-radius:12px;padding:10px 13px;font-size:14px}
+.pair .w{font-family:'Inter';font-weight:600;direction:ltr;cursor:pointer;padding:2px 6px;border-radius:7px;transition:.15s}
+.pair .w:hover{background:var(--accent);color:#fff}
+.pair .vs{color:#c3cade;font-size:11px}
+.pair .gloss{font-size:11.5px;color:var(--muted);margin-inline-start:auto;text-align:left;direction:rtl}
+
+.pgrid{display:grid;gap:12px}
+.prow{display:flex;align-items:center;gap:13px}
+.prow .lbl{font-family:'Inter';font-weight:700;font-size:14px;width:34px;color:var(--muted)}
+.prow .bar{flex:1;margin-top:0}
+.prow .val{font-family:'Inter';font-size:13px;font-weight:700;color:var(--muted);width:44px;text-align:left}
+
+.empty{text-align:center;padding:44px 20px;color:var(--muted)}
+.empty .em{font-size:40px;margin-bottom:12px;opacity:.6}
+
+.toast{position:fixed;bottom:26px;inset-inline-start:50%;transform:translateX(50%) translateY(90px);
+  background:#141827;color:#fff;padding:12px 22px;border-radius:14px;font-size:14px;font-weight:600;
+  box-shadow:0 14px 40px rgba(0,0,0,.28);transition:transform .35s cubic-bezier(.4,0,.2,1);z-index:200;pointer-events:none}
+.toast.show{transform:translateX(50%) translateY(0)}
+
+/* Conversations */
+.convo{background:var(--surface);border:1px solid var(--border);border-radius:16px;margin-bottom:12px;
+  box-shadow:var(--shadow);overflow:hidden;transition:.18s}
+.convo:hover{box-shadow:var(--shadow-lg)}
+.convo-h{padding:15px 18px;cursor:pointer;display:flex;align-items:center;gap:12px}
+.convo-h .ico{width:40px;height:40px;border-radius:12px;background:var(--accent-soft);color:var(--accent);
+  display:grid;place-items:center;font-size:18px;flex-shrink:0}
+.convo-h .txt{flex:1;min-width:0}
+.convo-h b{font-size:15px;display:block}
+.convo-h small{font-size:12.5px;color:var(--muted)}
+.convo-h .arw{color:var(--muted);transition:.25s}
+.convo.open .convo-h .arw{transform:rotate(180deg)}
+.convo-b{max-height:0;overflow:hidden;transition:max-height .45s cubic-bezier(.4,0,.2,1)}
+.convo.open .convo-b{max-height:2600px}
+.convo-inner{padding:0 18px 18px;border-top:1px solid var(--border);padding-top:14px}
+.convo-tools{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.line{display:flex;gap:11px;margin-bottom:13px;align-items:flex-start}
+.line .who{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;
+  font-family:'Inter';font-weight:700;font-size:13px;flex-shrink:0;color:#fff}
+.line.a .who{background:linear-gradient(135deg,#4f46e5,#6366f1)}
+.line.b .who{background:linear-gradient(135deg,#0ea5e9,#38bdf8)}
+.line .body{flex:1;min-width:0}
+.line .en-line{font-family:'Inter';font-size:15px;font-weight:600;direction:ltr;text-align:left;line-height:1.6;
+  display:flex;align-items:flex-start;gap:8px}
+.line .en-line span{flex:1}
+.line .fa-line{font-size:13px;color:var(--muted);margin-top:3px}
+.line .spk-line{width:28px;height:28px;border-radius:9px;background:var(--accent-soft);color:var(--accent);
+  display:grid;place-items:center;font-size:13px;flex-shrink:0;transition:.15s}
+.line .spk-line:hover{background:var(--accent);color:#fff}
+
+@media(max-width:640px){
+  body{font-size:14.5px}
+  .hero h1{font-size:21px}
+  .fc-front .big{font-size:30px}
+  .word-fa{margin-inline-start:0;width:100%}
+  .levels{width:100%;margin-inline-start:0}
+  .chip{flex:1;text-align:center;padding:7px 4px}
+  .brand small{display:none}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-row">
+    <div class="brand">
+      <div class="logo">En</div>
+      <div>انگلیسی برای فارسی‌زبانان<small>English for Persian Speakers</small></div>
+    </div>
+    <div class="levels" id="levels"></div>
+  </div>
+  <nav class="tabs" id="tabs"></nav>
+</header>
+
+<main class="shell" id="app"></main>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============================================================
+   1. LEVELS
+   ============================================================ */
+const LEVELS = ['A1','A2','B1','B2','C1'];
+const LEVEL_NAMES = {A1:'مبتدی',A2:'پایه',B1:'متوسط',B2:'متوسط بالا',C1:'پیشرفته'};
+
+/* ============================================================
+   2. VOCABULARY (level-based basics)
+   ============================================================ */
+const VOCAB = {
+A1:[
+ {en:'hello',fa:'سلام',pr:'هِلو',ex:'Hello! How are you?',exFa:'سلام! حال شما چطور است؟'},
+ {en:'goodbye',fa:'خداحافظ',pr:'گودبای',ex:'Goodbye! See you tomorrow.',exFa:'خداحافظ! فردا می‌بینمت.'},
+ {en:'thank you',fa:'متشکرم',pr:'ثَنک یو',ex:'Thank you for your help.',exFa:'از کمکت متشکرم.'},
+ {en:'please',fa:'لطفاً',pr:'پلیز',ex:'Please sit down.',exFa:'لطفاً بنشین.'},
+ {en:'yes',fa:'بله',pr:'یِس',ex:'Yes, I understand.',exFa:'بله، متوجه شدم.'},
+ {en:'no',fa:'نه',pr:'نو',ex:'No, thank you.',exFa:'نه، متشکرم.'},
+ {en:'sorry',fa:'ببخشید، متأسفم',pr:'ساری',ex:'Sorry, I am late.',exFa:'ببخشید، دیر کردم.'},
+ {en:'excuse me',fa:'ببخشید (برای جلب توجه)',pr:'اِکسکیوز می',ex:'Excuse me, where is the station?',exFa:'ببخشید، ایستگاه کجاست؟'},
+ {en:'water',fa:'آب',pr:'واوْتِر',ex:'I drink water every day.',exFa:'من هر روز آب می‌نوشم.'},
+ {en:'bread',fa:'نان',pr:'برِد',ex:'We buy bread in the morning.',exFa:'ما صبح نان می‌خریم.'},
+ {en:'tea',fa:'چای',pr:'تی',ex:'She drinks tea every morning.',exFa:'او هر صبح چای می‌نوشد.'},
+ {en:'coffee',fa:'قهوه',pr:'کافی',ex:'I would like a cup of coffee.',exFa:'یک فنجان قهوه می‌خواهم.'},
+ {en:'food',fa:'غذا',pr:'فود',ex:'The food is delicious.',exFa:'غذا خوشمزه است.'},
+ {en:'house',fa:'خانه',pr:'هاوس',ex:'Their house is very big.',exFa:'خانه‌شان خیلی بزرگ است.'},
+ {en:'car',fa:'ماشین',pr:'کار',ex:'My car is old.',exFa:'ماشین من قدیمی است.'},
+ {en:'book',fa:'کتاب',pr:'بوک',ex:'This book is interesting.',exFa:'این کتاب جالب است.'},
+ {en:'friend',fa:'دوست',pr:'فرِند',ex:'She is my best friend.',exFa:'او بهترین دوست من است.'},
+ {en:'family',fa:'خانواده',pr:'فَمِلی',ex:'My family lives in Tehran.',exFa:'خانواده‌ام در تهران زندگی می‌کند.'},
+ {en:'mother',fa:'مادر',pr:'ماذِر',ex:'My mother is a teacher.',exFa:'مادرم معلم است.'},
+ {en:'father',fa:'پدر',pr:'فاذِر',ex:'His father works here.',exFa:'پدرش اینجا کار می‌کند.'},
+ {en:'teacher',fa:'معلم',pr:'تیچِر',ex:'Our teacher is very kind.',exFa:'معلم ما خیلی مهربان است.'},
+ {en:'student',fa:'دانش‌آموز / دانشجو',pr:'استیودِنت',ex:'I am a student.',exFa:'من دانش‌آموز هستم.'},
+ {en:'morning',fa:'صبح',pr:'مورنینگ',ex:'I wake up early in the morning.',exFa:'من صبح زود بیدار می‌شوم.'},
+ {en:'night',fa:'شب',pr:'نایت',ex:'Good night!',exFa:'شب بخیر!'},
+ {en:'good',fa:'خوب',pr:'گود',ex:'This is a good idea.',exFa:'این ایدهٔ خوبی است.'},
+ {en:'big',fa:'بزرگ',pr:'بیگ',ex:'They have a big garden.',exFa:'آن‌ها باغ بزرگی دارند.'},
+ {en:'small',fa:'کوچک',pr:'اِسمال',ex:'I live in a small city.',exFa:'من در شهر کوچکی زندگی می‌کنم.'},
+ {en:'eat',fa:'خوردن',pr:'ایت',ex:'We eat lunch at noon.',exFa:'ما ظهر ناهار می‌خوریم.'},
+ {en:'drink',fa:'نوشیدن',pr:'درینک',ex:'She drinks tea every morning.',exFa:'او هر صبح چای می‌نوشد.'},
+ {en:'go',fa:'رفتن',pr:'گو',ex:'I go to school by bus.',exFa:'من با اتوبوس به مدرسه می‌روم.'},
+ {en:'come',fa:'آمدن',pr:'کام',ex:'Please come here.',exFa:'لطفاً اینجا بیا.'},
+ {en:'see',fa:'دیدن',pr:'سی',ex:'I see a bird in the tree.',exFa:'من پرنده‌ای روی درخت می‌بینم.'},
+ {en:'know',fa:'دانستن',pr:'نو',ex:'I know the answer.',exFa:'من جواب را می‌دانم.'},
+ {en:'work',fa:'کار کردن',pr:'وُرک',ex:'He works in a bank.',exFa:'او در یک بانک کار می‌کند.'},
+ {en:'today',fa:'امروز',pr:'تودِی',ex:'Today is Monday.',exFa:'امروز دوشنبه است.'},
+ {en:'tomorrow',fa:'فردا',pr:'تومارو',ex:'See you tomorrow.',exFa:'فردا می‌بینمت.'},
+ {en:'yesterday',fa:'دیروز',pr:'یِستِردِی',ex:'I saw him yesterday.',exFa:'دیروز او را دیدم.'},
+ {en:'how much',fa:'چقدر (قیمت)',pr:'هاو ماچ',ex:'How much is this?',exFa:'قیمت این چقدر است؟'},
+ {en:'where',fa:'کجا',pr:'وِر',ex:'Where is the bathroom?',exFa:'دستشویی کجاست؟'},
+ {en:'what',fa:'چه',pr:'وات',ex:'What is your name?',exFa:'اسم شما چیست؟'},
+ {en:'who',fa:'چه کسی',pr:'هو',ex:'Who is that man?',exFa:'آن مرد کیست؟'},
+ {en:'when',fa:'چه زمانی',pr:'وِن',ex:'When does it start?',exFa:'چه زمانی شروع می‌شود؟'},
+ {en:'why',fa:'چرا',pr:'وای',ex:'Why are you late?',exFa:'چرا دیر کردی؟'},
+ {en:'help',fa:'کمک',pr:'هِلپ',ex:'Can you help me?',exFa:'می‌توانی کمکم کنی؟'},
+ {en:'name',fa:'نام',pr:'نِیم',ex:'My name is Ali.',exFa:'نام من علی است.'},
+ {en:'number',fa:'شماره',pr:'نامبِر',ex:'What is your phone number?',exFa:'شماره تلفنت چیست؟'},
+ {en:'phone',fa:'تلفن',pr:'فون',ex:'My phone is not working.',exFa:'تلفنم کار نمی‌کند.'}
+],
+A2:[
+ {en:'travel',fa:'سفر کردن',pr:'تِرَوِل',ex:'I want to travel to England.',exFa:'می‌خواهم به انگلستان سفر کنم.'},
+ {en:'airport',fa:'فرودگاه',pr:'اِیرپورت',ex:'We arrived at the airport early.',exFa:'زود به فرودگاه رسیدیم.'},
+ {en:'ticket',fa:'بلیت',pr:'تیکِت',ex:'I bought two tickets online.',exFa:'دو بلیت آنلاین خریدم.'},
+ {en:'weather',fa:'آب‌وهوا',pr:'وِذِر',ex:'The weather is nice today.',exFa:'امروز هوا خوب است.'},
+ {en:'holiday',fa:'تعطیلات',pr:'هالیدِی',ex:'We went on holiday last week.',exFa:'هفتهٔ گذشته به تعطیلات رفتیم.'},
+ {en:'expensive',fa:'گران',pr:'اِکسپِنسيو',ex:'This restaurant is expensive.',exFa:'این رستوران گران است.'},
+ {en:'cheap',fa:'ارزان',pr:'چیپ',ex:'The tickets were cheap.',exFa:'بلیت‌ها ارزان بودند.'},
+ {en:'money',fa:'پول',pr:'مَنی',ex:'I do not have enough money.',exFa:'پول کافی ندارم.'},
+ {en:'job',fa:'شغل',pr:'جاب',ex:'He found a new job.',exFa:'او شغل جدیدی پیدا کرد.'},
+ {en:'office',fa:'دفتر',pr:'آفیس',ex:'My office is near the station.',exFa:'دفتر من نزدیک ایستگاه است.'},
+ {en:'meeting',fa:'جلسه',pr:'میتینگ',ex:'The meeting starts at nine.',exFa:'جلسه ساعت نُه شروع می‌شود.'},
+ {en:'happy',fa:'خوشحال',pr:'هَپی',ex:'I am happy to see you.',exFa:'از دیدن تو خوشحالم.'},
+ {en:'tired',fa:'خسته',pr:'تایِرد',ex:'She was tired after work.',exFa:'او بعد از کار خسته بود.'},
+ {en:'worried',fa:'نگران',pr:'وُریـد',ex:'Do not be worried about it.',exFa:'نگران آن نباش.'},
+ {en:'remember',fa:'به یاد آوردن',pr:'ریمِمبِر',ex:'I remember your name.',exFa:'اسم تو را به یاد می‌آورم.'},
+ {en:'forget',fa:'فراموش کردن',pr:'فورگِت',ex:'Do not forget your keys.',exFa:'کلیدهایت را فراموش نکن.'},
+ {en:'borrow',fa:'قرض گرفتن',pr:'بارو',ex:'Can I borrow your pen?',exFa:'می‌توانم خودکارت را قرض بگیرم؟'},
+ {en:'arrive',fa:'رسیدن',pr:'اِرایو',ex:'They arrived very late.',exFa:'آن‌ها خیلی دیر رسیدند.'},
+ {en:'invite',fa:'دعوت کردن',pr:'اینوایت',ex:'I invited my friends to dinner.',exFa:'دوستانم را به شام دعوت کردم.'},
+ {en:'decide',fa:'تصمیم گرفتن',pr:'دیساید',ex:'We decided to stay home.',exFa:'تصمیم گرفتیم خانه بمانیم.'},
+ {en:'explain',fa:'توضیح دادن',pr:'اِکسپلین',ex:'Can you explain this again?',exFa:'می‌توانی این را دوباره توضیح دهی؟'},
+ {en:'suggest',fa:'پیشنهاد دادن',pr:'سِگجِست',ex:'He suggested a good plan.',exFa:'او طرح خوبی پیشنهاد داد.'},
+ {en:'appointment',fa:'قرار ملاقات',pr:'اَپوینتمِنت',ex:'I have an appointment at ten.',exFa:'ساعت ده قرار ملاقات دارم.'},
+ {en:'address',fa:'آدرس',pr:'اَدْرِس',ex:'What is your address?',exFa:'آدرس شما چیست؟'},
+ {en:'medicine',fa:'دارو',pr:'مِدِسین',ex:'Take this medicine twice a day.',exFa:'این دارو را روزی دو بار بخور.'}
+],
+B1:[
+ {en:'achieve',fa:'دست یافتن، محقق کردن',pr:'اَچیو',ex:'She achieved her goal at last.',exFa:'او سرانجام به هدفش رسید.'},
+ {en:'improve',fa:'بهبود دادن',pr:'ایمپروو',ex:'I want to improve my English.',exFa:'می‌خواهم انگلیسی‌ام را بهبود دهم.'},
+ {en:'depend on',fa:'بستگی داشتن به',pr:'دیپِند آن',ex:'It depends on the weather.',exFa:'به هوا بستگی دارد.'},
+ {en:'look after',fa:'مراقبت کردن از',pr:'لوک آفتِر',ex:'She looks after her little brother.',exFa:'او از برادر کوچکش مراقبت می‌کند.'},
+ {en:'give up',fa:'رها کردن، تسلیم شدن',pr:'گیو آپ',ex:'Never give up on your dreams.',exFa:'هرگز رؤیاهایت را رها نکن.'},
+ {en:'find out',fa:'کشف کردن، فهمیدن',pr:'فایند اوت',ex:'I found out the truth yesterday.',exFa:'دیروز حقیقت را فهمیدم.'},
+ {en:'get along',fa:'کنار آمدن',pr:'گِت اِلانگ',ex:'They get along very well.',exFa:'آن‌ها خیلی خوب با هم کنار می‌آیند.'},
+ {en:'opportunity',fa:'فرصت',pr:'آپِرتونیوتی',ex:'This is a great opportunity.',exFa:'این فرصت بزرگی است.'},
+ {en:'experience',fa:'تجربه',pr:'اِکسپیریِنس',ex:'He has a lot of experience.',exFa:'او تجربهٔ زیادی دارد.'},
+ {en:'advantage',fa:'مزیت',pr:'اَدوانتیج',ex:'What are the advantages of it?',exFa:'مزیت‌های آن چیست؟'},
+ {en:'careful',fa:'مراقب، دقیق',pr:'کِرفول',ex:'Be careful with that glass.',exFa:'مراقب آن لیوان باش.'},
+ {en:'actually',fa:'در واقع',pr:'اَکچوالی',ex:'Actually, I disagree with you.',exFa:'در واقع، من با تو موافق نیستم.'},
+ {en:'probably',fa:'احتمالاً',pr:'پرابابلی',ex:'He is probably at home.',exFa:'او احتمالاً خانه است.'},
+ {en:'although',fa:'اگرچه',pr:'آلذو',ex:'Although it was raining, we went out.',exFa:'اگرچه باران می‌بارید، بیرون رفتیم.'},
+ {en:'unless',fa:'مگر اینکه',pr:'اَنلِس',ex:'I will not go unless you come.',exFa:'من نمی‌روم مگر اینکه تو بیایی.'},
+ {en:'manage',fa:'موفق شدن، اداره کردن',pr:'مَنیج',ex:'She managed to finish on time.',exFa:'او موفق شد به‌موقع تمام کند.'},
+ {en:'avoid',fa:'اجتناب کردن',pr:'اِووید',ex:'Try to avoid heavy traffic.',exFa:'سعی کن از ترافیک سنگین اجتناب کنی.'},
+ {en:'realize',fa:'پی بردن، درک کردن',pr:'ریلایز',ex:'I realized my mistake.',exFa:'من به اشتباهم پی بردم.'}
+],
+B2:[
+ {en:'significant',fa:'قابل توجه، معنادار',pr:'سیگنیفیکِنت',ex:'There was a significant increase in sales.',exFa:'افزایش قابل توجهی در فروش رخ داد.'},
+ {en:'available',fa:'در دسترس',pr:'اَوِیلِبل',ex:'Is this room available tonight?',exFa:'این اتاق امشب در دسترس است؟'},
+ {en:'consider',fa:'در نظر گرفتن',pr:'کِنسیدِر',ex:'We are considering the offer.',exFa:'ما در حال بررسی این پیشنهاد هستیم.'},
+ {en:'require',fa:'نیاز داشتن، الزام کردن',pr:'ریکوایِر',ex:'The job requires three years of experience.',exFa:'این شغل سه سال تجربه لازم دارد.'},
+ {en:'involved',fa:'درگیر، دخیل',pr:'اینوالود',ex:'She is heavily involved in the project.',exFa:'او شدیداً درگیر این پروژه است.'},
+ {en:'encourage',fa:'تشویق کردن',pr:'اِنکوریج',ex:'Teachers encourage students to ask questions.',exFa:'معلمان دانش‌آموزان را به پرسیدن سؤال تشویق می‌کنند.'},
+ {en:'affect',fa:'تأثیر گذاشتن بر',pr:'اَفِکت',ex:'Weather affects people\u2019s mood.',exFa:'آب‌وهوا بر روحیهٔ مردم تأثیر می‌گذارد.'},
+ {en:'efficient',fa:'کارآمد',pr:'اِفیشِنت',ex:'We need a more efficient system.',exFa:'ما به سیستم کارآمدتری نیاز داریم.'},
+ {en:'maintain',fa:'حفظ کردن، نگه داشتن',pr:'مِینتِین',ex:'It is hard to maintain a balance.',exFa:'حفظ تعادل دشوار است.'},
+ {en:'reliable',fa:'قابل اعتماد',pr:'ریلایِبل',ex:'We need a reliable source.',exFa:'ما به منبع قابل اعتمادی نیاز داریم.'},
+ {en:'take into account',fa:'در نظر گرفتن',pr:'تَیک اینتو اِکاونت',ex:'Take the costs into account.',exFa:'هزینه‌ها را در نظر بگیر.'},
+ {en:'carry out',fa:'انجام دادن، اجرا کردن',pr:'کَری اوت',ex:'They carried out a detailed study.',exFa:'آن‌ها مطالعهٔ دقیقی انجام دادند.'},
+ {en:'point out',fa:'اشاره کردن، خاطرنشان کردن',pr:'پوینت اوت',ex:'He pointed out a serious mistake.',exFa:'او به یک اشتباه جدی اشاره کرد.'},
+ {en:'come up with',fa:'به فکر رسیدن، ارائه دادن',pr:'کام آپ ویث',ex:'She came up with a brilliant idea.',exFa:'او ایدهٔ درخشانی ارائه داد.'},
+ {en:'on the other hand',fa:'از طرف دیگر',pr:'آن ذی اَذِر هَند',ex:'On the other hand, it is quite risky.',exFa:'از طرف دیگر، کاملاً پرخطر است.'},
+ {en:'as a result',fa:'در نتیجه',pr:'اَز اَ ریزالـت',ex:'As a result, prices went up.',exFa:'در نتیجه، قیمت‌ها بالا رفت.'}
+],
+C1:[
+ {en:'inevitable',fa:'اجتناب‌ناپذیر',pr:'اینِویتِبل',ex:'Change is inevitable in any organization.',exFa:'تغییر در هر سازمانی اجتناب‌ناپذیر است.'},
+ {en:'comprehensive',fa:'جامع و فراگیر',pr:'کامپریهِنسايو',ex:'They published a comprehensive report.',exFa:'آن‌ها گزارش جامعی منتشر کردند.'},
+ {en:'ambiguous',fa:'مبهم، دوپهلو',pr:'اَمبیگیوِس',ex:'His answer was deliberately ambiguous.',exFa:'پاسخ او عمداً مبهم بود.'},
+ {en:'undermine',fa:'تضعیف کردن',pr:'اَندِرماین',ex:'Constant criticism can undermine confidence.',exFa:'انتقاد مداوم می‌تواند اعتماد را تضعیف کند.'},
+ {en:'alleviate',fa:'تسکین دادن، کاهش دادن',pr:'اَلیویِیت',ex:'The new policy aims to alleviate poverty.',exFa:'سیاست جدید در پی کاهش فقر است.'},
+ {en:'prevalent',fa:'رایج، شایع',pr:'پرِوِلِنت',ex:'This belief is still prevalent today.',exFa:'این باور امروزه هنوز رایج است.'},
+ {en:'scrutiny',fa:'بررسی دقیق و موشکافانه',pr:'اسکروتِنی',ex:'The proposal came under close scrutiny.',exFa:'این پیشنهاد تحت بررسی دقیق قرار گرفت.'},
+ {en:'discrepancy',fa:'ناهمخوانی، اختلاف',pr:'دیسکرِپِنسی',ex:'There is a discrepancy between the two accounts.',exFa:'بین این دو روایت ناهمخوانی وجود دارد.'},
+ {en:'at odds with',fa:'در تناقض با',pr:'اَت آدز ویث',ex:'His actions are at odds with his words.',exFa:'رفتار او با حرف‌هایش در تناقض است.'},
+ {en:'shed light on',fa:'روشن کردن، توضیح دادن',pr:'شِد لایت آن',ex:'The study sheds light on the issue.',exFa:'این پژوهش موضوع را روشن می‌کند.'},
+ {en:'take for granted',fa:'بدیهی فرض کردن',pr:'تَیک فور گرَنتِد',ex:'We take clean water for granted.',exFa:'ما آب پاک را بدیهی فرض می‌کنیم.'},
+ {en:'a double-edged sword',fa:'شمشیری دو لبه',pr:'اَ دابِل اِجد سورد',ex:'Social media is a double-edged sword.',exFa:'شبکه‌های اجتماعی شمشیری دو لبه‌اند.'},
+ {en:'to some extent',fa:'تا حدی',pr:'تو سام اِکستِنت',ex:'I agree with you to some extent.',exFa:'تا حدی با تو موافقم.'},
+ {en:'bear in mind',fa:'در نظر داشتن',pr:'بِیر این مایند',ex:'Bear in mind that deadlines are strict.',exFa:'در نظر داشته باش که مهلت‌ها سختگیرانه‌اند.'}
+]
+};
+
+/* ============================================================
+   3. 504 ESSENTIAL WORDS
+   Format: word|pronunciation|persian|english example
+   ============================================================ */
+const W504_RAW = `
+abandon|uh-BAN-duhn|رها کردن، ترک کردن|The sailors abandoned the sinking ship.
+ability|uh-BIL-uh-tee|توانایی|She has the ability to solve problems.
+abroad|uh-BRAWD|خارج از کشور|He studied abroad for two years.
+absolute|AB-suh-loot|مطلق، کامل|I have absolute trust in her.
+absorb|uhb-ZORB|جذب کردن|Plants absorb water through their roots.
+abstract|AB-strakt|انتزاعی|The idea is too abstract for children.
+abundant|uh-BUN-duhnt|فراوان|The region has abundant rainfall.
+abuse|uh-BYOOZ|سوءاستفاده کردن|He abused his power as manager.
+accent|AK-sent|لهجه|She speaks English with a French accent.
+accept|ak-SEPT|پذیرفتن|I accept your apology.
+access|AK-ses|دسترسی|Students have access to the library.
+accident|AK-si-duhnt|تصادف، حادثه|He was injured in a car accident.
+accompany|uh-KUM-puh-nee|همراهی کردن|I will accompany you to the station.
+accomplish|uh-KOM-plish|به انجام رساندن|She accomplished the task quickly.
+according to|uh-KOR-ding too|بر اساس|According to the news, it will rain.
+account|uh-KOWNT|حساب|I opened a bank account yesterday.
+accurate|AK-yuh-rit|دقیق|The report is not entirely accurate.
+accuse|uh-KYOOZ|متهم کردن|They accused him of stealing.
+achieve|uh-CHEEV|دست یافتن|She achieved her goal at last.
+acknowledge|ak-NOL-ij|تصدیق کردن|He acknowledged his mistake.
+acquire|uh-KWY-ur|کسب کردن|He acquired a large fortune.
+across|uh-KRAWS|از عرض، آن طرف|We walked across the bridge.
+act|akt|عمل کردن|You must act quickly.
+active|AK-tiv|فعال|My grandfather is still very active.
+actual|AK-choo-uhl|واقعی|The actual cost was much higher.
+adapt|uh-DAPT|تطبیق دادن|Children adapt to new schools easily.
+add|ad|اضافه کردن|Add some sugar to the tea.
+adequate|AD-uh-kwit|کافی|The food supply is adequate.
+adjust|uh-JUST|تنظیم کردن|Please adjust the volume.
+admire|ad-MY-ur|تحسین کردن|I admire her courage.
+admit|ad-MIT|اعتراف کردن|He admitted that he was wrong.
+adopt|uh-DOPT|پذیرفتن، فرزندخواندگی|They adopted a child from Asia.
+advance|ad-VANS|پیشرفت|Medical science advances rapidly.
+advantage|ad-VAN-tij|مزیت|Speaking two languages is an advantage.
+adventure|ad-VEN-chur|ماجراجویی|We had a great adventure in the jungle.
+advertise|AD-vur-tyz|تبلیغ کردن|They advertise their products online.
+advice|ad-VYS|نصیحت|He gave me some good advice.
+affair|uh-FAIR|موضوع، امر|That is a private affair.
+affect|uh-FEKT|تأثیر گذاشتن|Smoking affects your health.
+afford|uh-FORD|توان مالی داشتن|We cannot afford a new car.
+afraid|uh-FRAYD|ترسیده|She is afraid of spiders.
+against|uh-GENST|علیه|He voted against the plan.
+age|ayj|سن|She started school at the age of six.
+agency|AY-juhn-see|آژانس|We booked through a travel agency.
+agent|AY-juhnt|نماینده|He works as a real estate agent.
+aggressive|uh-GRES-iv|پرخاشگر|His aggressive behavior worried us.
+agree|uh-GREE|موافقت کردن|I agree with your opinion.
+agriculture|AG-ri-kul-chur|کشاورزی|Agriculture is vital to the economy.
+ahead|uh-HED|جلوتر|Go ahead, I am listening.
+aid|ayd|کمک|They sent aid to the flood victims.
+aim|aym|هدف|Our aim is to finish by Friday.
+air|air|هوا|The air is fresh in the mountains.
+alarm|uh-LARM|هشدار|The fire alarm woke us up.
+album|AL-buhm|آلبوم|She showed us her photo album.
+alive|uh-LYV|زنده|He is lucky to be alive.
+allow|uh-LOW|اجازه دادن|My parents allow me to stay out late.
+almost|AWL-mohst|تقریباً|I have almost finished the book.
+alone|uh-LOHN|تنها|She lives alone in a small flat.
+along|uh-LONG|در طول|We walked along the river.
+already|awl-RED-ee|قبلاً|I have already eaten lunch.
+also|AWL-soh|همچنین|She also speaks French.
+alter|AWL-tur|تغییر دادن|We had to alter our plans.
+although|awl-THOH|اگرچه|Although it rained, we enjoyed the trip.
+altogether|awl-tuh-GETH-ur|کاملاً|That is altogether different.
+always|AWL-wayz|همیشه|He is always late.
+amaze|uh-MAYZ|شگفت‌زده کردن|Her talent amazed everyone.
+ambition|am-BISH-uhn|جاه‌طلبی|His ambition is to become a pilot.
+amount|uh-MOWNT|مقدار|A large amount of money was spent.
+analyze|AN-uh-lyz|تحلیل کردن|We need to analyze the data.
+ancient|AYN-shuhnt|باستانی|We visited the ancient ruins.
+anger|ANG-gur|خشم|He could not hide his anger.
+angle|ANG-guhl|زاویه|Look at it from a different angle.
+angry|ANG-gree|عصبانی|She was angry with me.
+animal|AN-uh-muhl|حیوان|The lion is a wild animal.
+announce|uh-NOWNS|اعلام کردن|They announced the winner.
+annual|AN-yoo-uhl|سالانه|The annual meeting is in June.
+anxious|ANGK-shuhs|مضطرب|She was anxious about the exam.
+apart|uh-PART|جدا|They live apart now.
+apologize|uh-POL-uh-jyz|عذرخواهی کردن|I apologize for being late.
+apparent|uh-PAIR-uhnt|آشکار|It was apparent that he was lying.
+appeal|uh-PEEL|جذابیت، درخواست|The idea appeals to young people.
+appear|uh-PEER|ظاهر شدن|A man appeared at the door.
+appetite|AP-uh-tyt|اشتها|I have no appetite today.
+apply|uh-PLY|درخواست دادن، به کار بردن|She applied for a new job.
+appoint|uh-POYNT|منصوب کردن|He was appointed as director.
+appreciate|uh-PREE-shee-ayt|قدر دانستن|I appreciate your help.
+approach|uh-PROHCH|نزدیک شدن|Winter is approaching.
+appropriate|uh-PROH-pree-it|مناسب|That dress is not appropriate for work.
+approve|uh-PROOV|تأیید کردن|The committee approved the plan.
+area|AIR-ee-uh|منطقه|This area is very quiet.
+argue|AR-gyoo|بحث کردن|They always argue about money.
+arise|uh-RYZ|برخاستن، رخ دادن|Problems may arise during the trip.
+arm|arm|بازو|He broke his arm playing football.
+army|AR-mee|ارتش|He joined the army at eighteen.
+around|uh-ROWND|اطراف|We sat around the fire.
+arrange|uh-RAYNJ|ترتیب دادن|I will arrange a meeting.
+arrest|uh-REST|دستگیر کردن|The police arrested the thief.
+arrival|uh-RY-vuhl|ورود|His arrival surprised everyone.
+art|art|هنر|She studies art at university.
+article|AR-ti-kuhl|مقاله|I read an interesting article.
+artificial|ar-tuh-FISH-uhl|مصنوعی|The flowers are artificial.
+ashamed|uh-SHAYMD|شرمنده|He was ashamed of his behavior.
+aside|uh-SYD|کنار|She stepped aside to let him pass.
+ask|ask|پرسیدن|May I ask a question?
+asleep|uh-SLEEP|خواب|The baby is asleep.
+aspect|AS-pekt|جنبه|Consider every aspect of the problem.
+assist|uh-SIST|کمک کردن|Can you assist me with this?
+associate|uh-SOH-shee-ayt|همراه کردن|I associate summer with the beach.
+assume|uh-SOOM|فرض کردن|I assume you agree with us.
+assure|uh-SHOOR|اطمینان دادن|I assure you it is safe.
+astonish|uh-STON-ish|شگفت‌زده کردن|The result astonished us all.
+athlete|ATH-leet|ورزشکار|He is a professional athlete.
+atmosphere|AT-muhs-feer|جو|The atmosphere at the party was great.
+attach|uh-TACH|چسباندن|Please attach the file to the email.
+attack|uh-TAK|حمله کردن|The army attacked at dawn.
+attempt|uh-TEMPT|تلاش کردن|He attempted to climb the mountain.
+attend|uh-TEND|شرکت کردن|I attend English classes twice a week.
+attention|uh-TEN-shuhn|توجه|Pay attention to the teacher.
+attitude|AT-uh-tood|نگرش|His attitude towards work is positive.
+attract|uh-TRAKT|جذب کردن|The show attracted a large audience.
+audience|AW-dee-uhns|مخاطبان|The audience clapped loudly.
+author|AW-thur|نویسنده|She is a famous author.
+authority|uh-THOR-uh-tee|اقتدار|The local authorities closed the road.
+available|uh-VAY-luh-buhl|در دسترس|Tickets are still available.
+average|AV-rij|متوسط|The average temperature is 20 degrees.
+avoid|uh-VOYD|اجتناب کردن|You should avoid junk food.
+awake|uh-WAYK|بیدار|I was awake all night.
+award|uh-WORD|جایزه|She won an award for her novel.
+aware|uh-WAIR|آگاه|Are you aware of the risks?
+awful|AW-fuhl|وحشتناک|The weather was awful.
+awkward|AWK-wurd|ناجور|There was an awkward silence.
+background|BAK-rownd|پیشینه|Tell me about your background.
+balance|BAL-uhns|تعادل|It is hard to balance work and family.
+band|band|گروه موسیقی|The band played all night.
+bargain|BAR-gin|چانه زدن، معامله|This coat was a real bargain.
+barrier|BAIR-ee-ur|مانع|Language can be a barrier.
+base|bays|پایه|The base of the statue is made of stone.
+basic|BAY-sik|پایه‌ای|These are the basic rules.
+battle|BAT-uhl|نبرد|The battle lasted three days.
+beam|beem|پرتو|A beam of light came through the window.
+bear|bair|تحمل کردن|I cannot bear this noise.
+beat|beet|شکست دادن|Our team beat theirs easily.
+beauty|BYOO-tee|زیبایی|The beauty of the sunset amazed us.
+because|bi-KAWZ|چون|I stayed home because I was sick.
+become|bi-KUM|شدن|She became a doctor.
+before|bi-FOR|پیش از|Call me before you leave.
+beg|beg|التماس کردن|He begged for forgiveness.
+begin|bi-GIN|شروع کردن|The film begins at eight.
+behalf|bi-HAF|به نمایندگی|I speak on behalf of the team.
+behave|bi-HAYV|رفتار کردن|The children behaved very well.
+behind|bi-HYND|پشت|The car is behind the house.
+being|BEE-ing|موجود|Every human being deserves respect.
+belief|bi-LEEF|باور|She has a strong belief in God.
+believe|bi-LEEV|باور کردن|I believe you are right.
+belong|bi-LONG|تعلق داشتن|This book belongs to me.
+below|bi-LOH|زیر|The temperature fell below zero.
+benefit|BEN-uh-fit|سود|Exercise has many benefits.
+beside|bi-SYD|در کنار|Sit beside me.
+besides|bi-SYDZ|علاوه بر|Besides English, she speaks German.
+best|best|بهترین|This is the best film I have seen.
+betray|bi-TRAY|خیانت کردن|He betrayed his closest friend.
+better|BET-ur|بهتر|You had better rest.
+between|bi-TWEEN|بین|The bank is between two shops.
+beyond|bi-YOND|فراتر|The cost went beyond our budget.
+bill|bil|صورت حساب|Can we have the bill, please?
+bind|bynd|بستن|They bound his hands with rope.
+biology|by-OL-uh-jee|زیست‌شناسی|She teaches biology at school.
+bitter|BIT-ur|تلخ|The medicine has a bitter taste.
+blame|blaym|سرزنش کردن|Do not blame me for the mistake.
+blank|blangk|خالی|Fill in the blank spaces.
+blanket|BLANG-kit|پتو|She covered the baby with a blanket.
+bleed|bleed|خونریزی کردن|His nose was bleeding.
+bless|bles|برکت دادن|May God bless you.
+blind|blynd|نابینا|The accident left him blind.
+block|blok|مسدود کردن|A fallen tree blocked the road.
+blood|blud|خون|Blood is thicker than water.
+blow|bloh|فوت کردن|Blow out the candles.
+board|bord|تخته، سوار شدن|We boarded the plane at noon.
+boast|bohst|فخر فروختن|He likes to boast about his success.
+bold|bohld|جسور|It was a bold decision.
+bomb|bom|بمب|The bomb exploded at night.
+bond|bond|پیوند|There is a strong bond between them.
+bone|bohn|استخوان|The dog buried a bone.
+border|BOR-dur|مرز|We crossed the border at dawn.
+bore|bor|خسته کردن|The lecture bored the students.
+borrow|BOR-oh|قرض گرفتن|May I borrow your pen?
+both|bohth|هر دو|Both of them are doctors.
+bother|BOTH-ur|مزاحم شدن|Do not bother me now.
+bottle|BOT-uhl|بطری|She drank a bottle of water.
+bottom|BOT-uhm|پایین|The key was at the bottom of the bag.
+bound|bownd|مقید|He is bound to succeed.
+brain|brayn|مغز|The human brain is complex.
+branch|branch|شاخه|The bird sat on a branch.
+brand|brand|برند|This brand is very popular.
+brave|brayv|شجاع|The brave soldier saved his friend.
+bread|bred|نان|We bought fresh bread.
+break|brayk|شکستن|Be careful not to break the glass.
+breathe|breeth|نفس کشیدن|Breathe deeply and relax.
+breed|breed|پرورش دادن|They breed horses on the farm.
+breeze|breez|نسیم|A cool breeze came from the sea.
+brief|breef|مختصر|Please be brief.
+bright|bryt|روشن|The room is bright and sunny.
+brilliant|BRIL-yuhnt|درخشان|That was a brilliant idea.
+bring|bring|آوردن|Bring me a glass of water.
+broad|brawd|پهن|The river is very broad here.
+broadcast|BRAWD-kast|پخش کردن|The match will be broadcast live.
+budget|BUJ-it|بودجه|We must stay within budget.
+build|bild|ساختن|They are building a new school.
+bunch|bunch|دسته|She bought a bunch of flowers.
+burden|BUR-duhn|بار سنگین|Caring for the family is a heavy burden.
+burn|burn|سوزاندن|Do not burn the paper.
+burst|burst|ترکیدن|The balloon burst suddenly.
+bury|BAIR-ee|دفن کردن|They buried the dog in the garden.
+business|BIZ-nis|کسب و کار|He runs a small business.
+busy|BIZ-ee|مشغول|I am busy right now.
+butter|BUT-ur|کره|Spread some butter on the bread.
+button|BUT-uhn|دکمه|Press the red button.
+buy|by|خریدن|I want to buy a new phone.
+cabin|KAB-in|کابین|We stayed in a small cabin.
+cable|KAY-buhl|کابل|The cable is not connected.
+calculate|KAL-kyuh-layt|محاسبه کردن|Let me calculate the total.
+calendar|KAL-uhn-dur|تقویم|Mark the date on your calendar.
+call|kawl|زنگ زدن، صدا کردن|Call me when you arrive.
+calm|kahm|آرام|Stay calm and do not panic.
+camera|KAM-uh-ruh|دوربین|He bought a new camera.
+camp|kamp|اردو|We camped near the lake.
+campaign|kam-PAYN|کمپین|The campaign was very successful.
+campus|KAM-puhs|محوطه دانشگاه|Students live on campus.
+cancel|KAN-suhl|لغو کردن|The flight was cancelled.
+candidate|KAN-di-dayt|نامزد|She is a candidate for the job.
+capable|KAY-puh-buhl|توانا|He is capable of doing better.
+capacity|kuh-PAS-uh-tee|ظرفیت|The stadium has a capacity of 50,000.
+capital|KAP-uh-tuhl|پایتخت، سرمایه|Tehran is the capital of Iran.
+captain|KAP-tin|ناخدا، کاپیتان|The captain welcomed the passengers.
+capture|KAP-chur|دستگیر کردن|The police captured the robber.
+carbon|KAR-buhn|کربن|Carbon dioxide is a greenhouse gas.
+care|kair|مراقبت|Take care of yourself.
+career|kuh-REER|حرفه|She has a successful career.
+careful|KAIR-fuhl|مراقب|Be careful with the knife.
+carry|KAIR-ee|حمل کردن|Can you carry this box?
+case|kays|مورد، پرونده|In that case, we should leave.
+cash|kash|پول نقد|I paid in cash.
+cast|kast|پرتاب کردن|He cast the net into the sea.
+castle|KAS-uhl|قلعه|We visited an old castle.
+casual|KAZH-oo-uhl|معمولی، غیررسمی|Wear casual clothes to the party.
+catch|kach|گرفتن|Catch the ball!
+category|KAT-uh-gor-ee|دسته|This book falls into the history category.
+cause|kawz|علت|What caused the accident?
+celebrate|SEL-uh-brayt|جشن گرفتن|We celebrated her birthday.
+cell|sel|سلول|The body is made of cells.
+center|SEN-tur|مرکز|The center of the city is crowded.
+century|SEN-chuh-ree|قرن|This church is two centuries old.
+certain|SUR-tuhn|مطمئن|I am certain he will come.
+chain|chayn|زنجیر|The dog was tied with a chain.
+chair|chair|صندلی|Please take a chair.
+challenge|CHAL-inj|چالش|Learning a language is a challenge.
+chamber|CHAYM-bur|اتاق|The king entered the chamber.
+champion|CHAM-pee-uhn|قهرمان|She is the world champion.
+chance|chans|شانس|Give me a chance to explain.
+change|chaynj|تغییر|We need a change of plan.
+channel|CHAN-uhl|کانال|Change the TV channel.
+chapter|CHAP-tur|فصل|Read the first chapter.
+character|KAIR-ik-tur|شخصیت|He has a strong character.
+charge|charj|شارژ، هزینه|How much do you charge per hour?
+charity|CHAIR-uh-tee|خیریه|She gives money to charity.
+charm|charm|جذابیت|The village has a special charm.
+chart|chart|نمودار|The chart shows the results.
+chase|chays|تعقیب کردن|The dog chased the cat.
+cheap|cheep|ارزان|This restaurant is cheap.
+cheat|cheet|تقلب کردن|Do not cheat in the exam.
+check|chek|بررسی کردن|Check your answers carefully.
+cheerful|CHEER-fuhl|شاد|She is always cheerful.
+chemical|KEM-i-kuhl|شیمیایی|This chemical is dangerous.
+chest|chest|سینه|He felt a pain in his chest.
+chief|cheef|رئیس|The chief of police spoke to us.
+child|chyld|کودک|Every child needs love.
+choice|choys|انتخاب|You made the right choice.
+choose|chooz|انتخاب کردن|Choose a color you like.
+church|church|کلیسا|They go to church on Sundays.
+circle|SUR-kuhl|دایره|Draw a circle on the paper.
+circumstance|SUR-kuhm-stans|شرایط|Under no circumstances should you quit.
+citizen|SIT-uh-zuhn|شهروند|He is a citizen of Canada.
+city|SIT-ee|شهر|Tehran is a big city.
+civil|SIV-uhl|مدنی|Civil rights are important.
+claim|klaym|ادعا کردن|He claims to be innocent.
+class|klas|کلاس|Our class starts at eight.
+classic|KLAS-ik|کلاسیک|This is a classic novel.
+clean|kleen|تمیز|Keep your room clean.
+clear|kleer|واضح|The instructions are clear.
+clever|KLEV-ur|باهوش|She is a clever student.
+client|KLY-uhnt|مشتری|The lawyer met his client.
+climate|KLY-mit|آب و هوا|The climate here is mild.
+climb|klym|بالا رفتن|We climbed the mountain.
+clock|klok|ساعت|The clock on the wall is broken.
+close|klohz|بستن|Please close the door.
+cloth|kloth|پارچه|The cloth is soft.
+cloud|klowd|ابر|Dark clouds filled the sky.
+club|klub|باشگاه|He joined a football club.
+coast|kohst|ساحل|We drove along the coast.
+coffee|KOF-ee|قهوه|I drink coffee every morning.
+coin|koyn|سکه|He collects old coins.
+cold|kohld|سرد|It is very cold outside.
+collapse|kuh-LAPS|فرو ریختن|The bridge collapsed suddenly.
+colleague|KOL-eeg|همکار|My colleagues are very helpful.
+collect|kuh-LEKT|جمع کردن|She collects stamps.
+college|KOL-ij|کالج|He studies at a college.
+colony|KOL-uh-nee|مستعمره|This was once a British colony.
+color|KUL-ur|رنگ|What color is your car?
+column|KOL-uhm|ستون|The article is in the first column.
+combine|kuhm-BYN|ترکیب کردن|Combine the eggs and sugar.
+come|kum|آمدن|Come here, please.
+comfort|KUM-furt|راحتی|He lives in comfort.
+command|kuh-MAND|فرمان|The general gave the command.
+comment|KOM-ent|نظر|He made a rude comment.
+commerce|KOM-urs|تجارت|Commerce between the countries grew.
+commercial|kuh-MUR-shuhl|تجاری|The commercial was very funny.
+commission|kuh-MISH-uhn|کمیسیون|He earns a commission on sales.
+commit|kuh-MIT|مرتکب شدن|He committed a serious crime.
+committee|kuh-MIT-ee|کمیته|The committee will meet tomorrow.
+common|KOM-uhn|مشترک|This is a common mistake.
+communicate|kuh-MYOO-ni-kayt|ارتباط برقرار کردن|We communicate by email.
+community|kuh-MYOO-ni-tee|جامعه|The whole community helped.
+company|KUM-puh-nee|شرکت|She works for a big company.
+compare|kuhm-PAIR|مقایسه کردن|Compare these two pictures.
+compete|kuhm-PEET|رقابت کردن|Teams from ten countries competed.
+complain|kuhm-PLAYN|شکایت کردن|He complained about the service.
+complete|kuhm-PLEET|کامل کردن|Please complete the form.
+complex|kuhm-PLEKS|پیچیده|This is a complex problem.
+complicate|KOM-pli-kayt|پیچیده کردن|Do not complicate things.
+compliment|KOM-pluh-muhnt|تعریف کردن|He paid her a compliment.
+compose|kuhm-POHZ|تشکیل دادن، آهنگ ساختن|Water is composed of hydrogen and oxygen.
+compound|KOM-pownd|ترکیب|Water is a compound.
+comprehensive|kom-pri-HEN-siv|جامع|We need a comprehensive plan.
+compromise|KOM-pruh-myz|سازش|Both sides reached a compromise.
+computer|kuhm-PYOO-tur|کامپیوتر|My computer is very slow.
+conceal|kuhn-SEEL|پنهان کردن|He concealed the truth from us.
+concentrate|KON-suhn-trayt|تمرکز کردن|I cannot concentrate with this noise.
+concept|KON-sept|مفهوم|The concept is hard to explain.
+concern|kuhn-SURN|نگرانی|His health is my main concern.
+conclude|kuhn-KLOOD|نتیجه‌گیری کردن|We concluded that he was right.
+concrete|KON-kreet|بتنی، مشخص|We need concrete evidence.
+condition|kuhn-DISH-uhn|شرایط|The car is in good condition.
+conduct|kuhn-DUKT|انجام دادن|They conducted a survey.
+conference|KON-fur-uhns|کنفرانس|She attended a medical conference.
+confidence|KON-fi-duhns|اعتماد به نفس|He lacks confidence in himself.
+confirm|kuhn-FURM|تأیید کردن|Please confirm your reservation.
+conflict|KON-flikt|تعارض|There is a conflict between the two plans.
+confuse|kuhn-FYOOZ|گیج کردن|The instructions confused me.
+congratulate|kuhn-GRACH-uh-layt|تبریک گفتن|I congratulate you on your success.
+connect|kuh-NEKT|وصل کردن|Connect the printer to the computer.
+conscious|KON-shuhs|آگاه|He was conscious of his mistake.
+consequence|KON-si-kwens|پیامد|You must accept the consequences.
+consider|kuhn-SID-ur|در نظر گرفتن|Please consider my offer.
+consist|kuhn-SIST|تشکیل شدن|The team consists of five players.
+constant|KON-stuhnt|ثابت|She lives in constant fear.
+constitute|KON-sti-toot|تشکیل دادن|Women constitute half the workforce.
+construct|kuhn-STRUKT|ساختن|They are constructing a new bridge.
+consult|kuhn-SULT|مشورت کردن|You should consult a doctor.
+consume|kuhn-SOOM|مصرف کردن|This car consumes a lot of fuel.
+contact|KON-takt|تماس|I will contact you later.
+contain|kuhn-TAYN|شامل شدن|This box contains old photos.
+contemporary|kuhn-TEM-puh-rer-ee|معاصر|She likes contemporary art.
+content|KON-tent|محتوا|The content of the letter surprised me.
+contest|KON-test|مسابقه|She won the singing contest.
+context|KON-tekst|زمینه|The word has a different meaning in this context.
+continue|kuhn-TIN-yoo|ادامه دادن|Please continue your story.
+contract|KON-trakt|قرارداد|He signed a two-year contract.
+contrast|KON-trast|تقابل|There is a sharp contrast between them.
+contribute|kuhn-TRIB-yoot|کمک کردن|Everyone contributed to the project.
+control|kuhn-TROHL|کنترل کردن|He lost control of the car.
+convenient|kuhn-VEEN-yuhnt|راحت|Is Monday convenient for you?
+conversation|kon-vur-SAY-shuhn|مکالمه|We had a long conversation.
+convert|kuhn-VURT|تبدیل کردن|They converted the barn into a house.
+convey|kuhn-VAY|انتقال دادن|Words cannot convey my feelings.
+convince|kuhn-VINS|متقاعد کردن|She convinced me to stay.
+cook|kuk|پختن|My father cooks dinner on Sundays.
+cool|kool|خنک|The evening air was cool.
+cooperate|koh-OP-uh-rayt|همکاری کردن|The two companies cooperated.
+cope|kohp|کنار آمدن|She copes well with stress.
+copy|KOP-ee|کپی کردن|Copy this page for me.
+core|kor|هسته|Honesty is at the core of our values.
+corner|KOR-nur|گوشه|The shop is on the corner.
+correct|kuh-REKT|درست|Your answer is correct.
+correspond|kor-uh-SPOND|مکاتبه کردن|We correspond by email.
+cost|kost|هزینه|The cost of living is rising.
+cottage|KOT-ij|کلبه|They live in a small cottage.
+cotton|KOT-uhn|پنبه|This shirt is made of cotton.
+cough|kof|سرفه کردن|He coughed all night.
+council|KOWN-suhl|شورا|The city council met yesterday.
+count|kownt|شمردن|Count the money carefully.
+country|KUN-tree|کشور|Iran is a beautiful country.
+couple|KUP-uhl|زوج|The couple got married last month.
+courage|KUR-ij|شجاعت|It takes courage to speak up.
+course|kors|دوره|I am taking an English course.
+court|kort|دادگاه|The case will go to court.
+cover|KUV-ur|پوشاندن|Snow covered the mountains.
+crack|krak|ترک|There is a crack in the wall.
+craft|kraft|صنعت دستی|She sells handmade crafts.
+crash|krash|تصادف کردن|The two cars crashed.
+crazy|KRAY-zee|دیوانه|That is a crazy idea.
+create|kree-AYT|خلق کردن|God created the world.
+creature|KREE-chur|موجود|The forest is full of strange creatures.
+credit|KRED-it|اعتبار|He bought the car on credit.
+crime|krym|جرم|Crime is increasing in the city.
+crisis|KRY-sis|بحران|The country faces an economic crisis.
+critical|KRIT-i-kuhl|حیاتی، انتقادی|This is a critical moment.
+criticize|KRIT-uh-syz|انتقاد کردن|He criticized the government.
+crop|krop|محصول|The farmers harvested the crops.
+cross|kros|عبور کردن|Cross the street carefully.
+crowd|krowd|جمعیت|A large crowd gathered in the square.
+crucial|KROO-shuhl|حیاتی|This is a crucial decision.
+cruel|KROO-uhl|ظالم|It is cruel to hurt animals.
+cry|kry|گریه کردن|The baby cried all night.
+cultural|KUL-chuh-ruhl|فرهنگی|We visited many cultural sites.
+culture|KUL-chur|فرهنگ|I love learning about other cultures.
+cure|kyoor|درمان کردن|The doctor cured his illness.
+curious|KYOOR-ee-uhs|کنجکاو|Children are naturally curious.
+current|KUR-uhnt|جاری|The current situation is difficult.
+custom|KUS-tuhm|رسم|It is a local custom.
+customer|KUS-tuh-mur|مشتری|The customer is always right.
+cut|kut|بریدن|Cut the cake into eight pieces.
+cycle|SY-kuhl|چرخه|The life cycle of a butterfly is fascinating.
+daily|DAY-lee|روزانه|I read the news daily.
+damage|DAM-ij|آسیب|The storm caused a lot of damage.
+danger|DAYN-jur|خطر|There is danger of fire.
+dark|dark|تاریک|It gets dark early in winter.
+data|DAY-tuh|داده|The data shows a clear trend.
+date|dayt|تاریخ|What is the date today?
+daughter|DAW-tur|دختر|Their daughter is a doctor.
+day|day|روز|Have a nice day!
+dead|ded|مرده|The plant is dead.
+deal|deel|معامله|We made a deal with them.
+dear|deer|عزیز|Dear Sara, thank you for your letter.
+death|deth|مرگ|His death was a great loss.
+debate|di-BAYT|بحث|There was a heated debate.
+debt|det|بدهی|He is trying to pay off his debts.
+decade|DEK-ayd|دهه|The city changed a lot over the last decade.
+decide|di-SYD|تصمیم گرفتن|We decided to move to another city.
+declare|di-KLAIR|اعلام کردن|The government declared a state of emergency.
+decline|di-KLYN|کاهش یافتن|Sales declined last year.
+decorate|DEK-uh-rayt|تزئین کردن|We decorated the room with flowers.
+decrease|di-KREES|کاهش دادن|The company decreased its prices.
+deep|deep|عمیق|The lake is very deep.
+defeat|di-FEET|شکست دادن|Our team defeated theirs.
+defend|di-FEND|دفاع کردن|He defended his country.
+define|di-FYN|تعریف کردن|Can you define this word?
+degree|di-GREE|درجه|The temperature dropped ten degrees.
+delay|di-LAY|تأخیر|The flight was delayed by two hours.
+delicate|DEL-i-kit|ظریف|The vase is very delicate.
+deliver|di-LIV-ur|تحویل دادن|The package will be delivered tomorrow.
+demand|di-MAND|تقاضا|There is high demand for this product.
+democracy|di-MOK-ruh-see|دموکراسی|They fought for democracy.
+demonstrate|DEM-uhn-strayt|نشان دادن|He demonstrated how to use the machine.
+deny|di-NY|انکار کردن|He denied stealing the money.
+depart|di-PART|عزیمت کردن|The train departs at six.
+depend|di-PEND|بستگی داشتن|It depends on your decision.
+describe|di-SKRYB|توصیف کردن|Describe the man you saw.
+desert|DEZ-urt|بیابان|The Sahara is the largest hot desert.
+deserve|di-ZURV|سزاوار بودن|You deserve a reward.
+design|di-ZYN|طراحی کردن|She designs wedding dresses.
+desire|di-ZY-ur|آرزو|He has a strong desire to succeed.
+despite|di-SPYT|با وجود|Despite the rain, we went out.
+destroy|di-STROY|نابود کردن|The fire destroyed the house.
+detail|DEE-tayl|جزئیات|Tell me all the details.
+detect|di-TEKT|کشف کردن|The device detects smoke.
+determine|di-TUR-min|تعیین کردن|We must determine the cause.
+develop|di-VEL-uhp|توسعه دادن|They developed a new vaccine.
+device|di-VYS|دستگاه|This device measures temperature.
+devote|di-VOHT|وقف کردن|She devoted her life to teaching.
+dialogue|DY-uh-log|گفتگو|The two countries began a dialogue.
+differ|DIF-ur|تفاوت داشتن|Their opinions differ greatly.
+difficult|DIF-i-kuhlt|دشوار|This exercise is difficult.
+dig|dig|کندن|They dug a hole in the garden.
+direct|di-REKT|مستقیم|Is there a direct flight?
+dirt|durt|کثیفی|His shoes were covered with dirt.
+disagree|dis-uh-GREE|مخالفت کردن|I disagree with your plan.
+disappear|dis-uh-PEER|ناپدید شدن|The sun disappeared behind the clouds.
+disappoint|dis-uh-POYNT|ناامید کردن|The result disappointed us.
+disaster|di-ZAS-tur|فاجعه|The earthquake was a terrible disaster.
+discipline|DIS-uh-plin|نظم|Good discipline is important at school.
+discover|di-SKUV-ur|کشف کردن|Scientists discovered a new planet.
+discuss|di-SKUS|بحث کردن|Let us discuss the problem.
+disease|di-ZEEZ|بیماری|Heart disease is very common.
+disguise|dis-GYZ|تغییر قیافه|He entered the party in disguise.
+disgust|dis-GUST|انزجار|The smell filled me with disgust.
+dish|dish|غذا، ظرف|This is my favorite dish.
+dismiss|dis-MIS|اخراج کردن|He was dismissed from his job.
+display|di-SPLAY|نمایش دادن|The museum displays ancient coins.
+distance|DIS-tuhns|فاصله|The distance between the two cities is 300 km.
+distinct|di-STINKT|متمایز|There is a distinct difference between them.
+distribute|di-STRIV-yoot|توزیع کردن|They distributed food to the poor.
+district|DIS-trikt|ناحیه|This is a busy shopping district.
+disturb|di-STURB|مزاحم شدن|Do not disturb him while he works.
+dive|dyv|شیرجه زدن|He dived into the pool.
+divide|di-VYD|تقسیم کردن|Divide the cake into six pieces.
+doctor|DOK-tur|پزشک|You should see a doctor.
+document|DOK-yuh-muhnt|سند|Keep all your documents safe.
+domestic|duh-MES-tik|داخلی|Domestic flights are cheap.
+dominate|DOM-uh-nayt|تسلط داشتن|One company dominates the market.
+donate|DOH-nayt|اهدا کردن|She donated money to the hospital.
+doubt|dowt|شک|I doubt he will come.
+dozen|DUZ-uhn|دوجین|She bought a dozen eggs.
+draft|draft|پیش‌نویس|This is only the first draft.
+dramatic|druh-MAT-ik|چشمگیر|There was a dramatic change in weather.
+`;
+
+const W504 = W504_RAW.trim().split('\n').map((line, i)=>{
+  const [en, pr, fa, ex] = line.split('|');
+  return {en, pr, fa, ex, lesson: Math.floor(i/12)+1};
+});
+
+/* ============================================================
+   4. DAILY CONVERSATIONS
+   ============================================================ */
+const CONVOS = [
+{id:'greet',t:'Greetings & Introductions',tf:'سلام و معرفی',d:'اولین برخوردها، معرفی خود و احوال‌پرسی',ic:'👋',
+ l:[
+ ['A','Hi! I am Sara. Nice to meet you.','سلام! من سارا هستم. از آشنایی خوشبختم.'],
+ ['B','Nice to meet you too, Sara. I am Ali.','من هم از آشنایی خوشبختم، سارا. من علی هستم.'],
+ ['A','Where are you from, Ali?','علی، اهل کجایی؟'],
+ ['B','I am from Iran. I live in Tehran. And you?','من اهل ایرانم. در تهران زندگی می‌کنم. شما؟'],
+ ['A','I am from Canada. This is my first time here.','من اهل کانادام. اولین بار است که اینجا هستم.'],
+ ['B','Welcome! How do you like it so far?','خوش آمدی! تا اینجا چطور بوده؟'],
+ ['A','I love it. The people are very friendly.','خیلی دوستش دارم. مردم بسیار خوش‌برخوردند.'],
+ ['B','That is great to hear. What do you do?','خوشحالم که این را می‌شنوم. شغلت چیست؟'],
+ ['A','I am a teacher. I teach English.','من معلم هستم. انگلیسی تدریس می‌کنم.'],
+ ['B','How interesting! Well, it was nice meeting you.','چقدر جالب! خوب، از آشنایی‌ات خوشحال شدم.']
+ ]},
+{id:'small',t:'Small Talk & Weather',tf:'گپ و گفتگو درباره آب‌وهوا',d:'شروع مکالمه غیررسمی و ادامه دادن آن',ic:'☀️',
+ l:[
+ ['A','Beautiful day, is not it?','هوای زیبایی است، نه؟'],
+ ['B','It really is. I love this kind of weather.','واقعاً همین‌طور است. من این نوع هوا را دوست دارم.'],
+ ['A','Me too. It is much better than last week.','من هم همین‌طور. خیلی بهتر از هفته گذشته است.'],
+ ['B','Last week was terrible. It rained every day.','هفته گذشته وحشتناک بود. هر روز باران می‌بارید.'],
+ ['A','I know! Did you do anything interesting?','می‌دانم! کار جالبی انجام دادی؟'],
+ ['B','Not really. I mostly stayed home. What about you?','نه واقعاً. بیشتر خانه ماندم. تو چطور؟'],
+ ['A','I watched a few good movies and read a book.','چند فیلم خوب دیدم و یک کتاب خواندم.'],
+ ['B','That sounds relaxing. I might do the same this weekend.','به نظر آرام‌بخش می‌آید. شاید این آخر هفته همین کار را بکنم.']
+ ]},
+{id:'directions',t:'Asking for Directions',tf:'پرسیدن آدرس',d:'پیدا کردن راه در شهر و پرسیدن مسیر',ic:'🧭',
+ l:[
+ ['A','Excuse me, could you help me?','ببخشید، می‌توانید کمکم کنید؟'],
+ ['B','Of course. What do you need?','البته. چه چیزی لازم دارید؟'],
+ ['A','How do I get to the train station?','چطور به ایستگاه قطار بروم؟'],
+ ['B','Go straight for two blocks, then turn right.','دو کوچه مستقیم بروید، بعد به راست بپیچید.'],
+ ['A','Is it far from here?','از اینجا دور است؟'],
+ ['B','No, it is about a ten-minute walk.','نه، حدود ده دقیقه پیاده‌روی است.'],
+ ['A','Great. Is there a bus I could take?','عالی. اتوبوسی هست که بتوانم سوار شوم؟'],
+ ['B','Yes, the number 5 bus stops right there.','بله، اتوبوس شماره ۵ همان‌جا توقف می‌کند.'],
+ ['A','Thank you so much for your help!','از کمکتان بسیار متشکرم!'],
+ ['B','You are welcome. Have a nice day!','خواهش می‌کنم. روز خوبی داشته باشید!']
+ ]},
+{id:'restaurant',t:'At the Restaurant',tf:'در رستوران',d:'سفارش غذا، پرسیدن درباره منو و پرداخت',ic:'🍽️',
+ l:[
+ ['A','Good evening. A table for two, please.','عصر بخیر. یک میز برای دو نفر، لطفاً.'],
+ ['B','Certainly. Follow me, please. Here is the menu.','حتماً. لطفاً دنبالم بیایید. این هم منو.'],
+ ['A','Thank you. What do you recommend?','متشکرم. چه چیزی پیشنهاد می‌کنید؟'],
+ ['B','The grilled chicken is very popular.','مرغ کبابی خیلی محبوب است.'],
+ ['A','That sounds good. I will have that.','خوب به نظر می‌رسد. همان را می‌خورم.'],
+ ['B','And for you, sir?','و برای شما، قربان؟'],
+ ['A','I would like the steak, medium rare.','استیک را می‌خواهم، متوسط.'],
+ ['B','Would you like anything to drink?','نوشیدنی چیزی میل دارید؟'],
+ ['A','Two glasses of water, please.','دو لیوان آب، لطفاً.'],
+ ['B','Very good. Your food will be ready soon.','بسیار خوب. غذایتان به‌زودی آماده می‌شود.']
+ ]},
+{id:'coffee',t:'Ordering Coffee',tf:'سفارش قهوه',d:'در کافه، سفارش دادن و پرداخت',ic:'☕',
+ l:[
+ ['A','Hi, what can I get for you today?','سلام، امروز چه چیزی برایتان بیاورم؟'],
+ ['B','Can I have a large latte, please?','می‌توانم یک لاته بزرگ بگیرم، لطفاً؟'],
+ ['A','Sure. Hot or iced?','حتماً. گرم یا یخ؟'],
+ ['B','Hot, please. With almond milk if you have it.','گرم، لطفاً. با شیر بادام اگر دارید.'],
+ ['A','We do. Anything else?','داریم. چیز دیگری؟'],
+ ['B','Yes, one blueberry muffin, please.','بله، یک ماфین بلوبری، لطفاً.'],
+ ['A','For here or to go?','اینجا می‌خورید یا بیرون می‌برید؟'],
+ ['B','To go, please. How much is it?','بیرون می‌برم، لطفاً. چقدر می‌شود؟'],
+ ['A','That will be seven dollars and fifty cents.','هفت دلار و پنجاه سنت می‌شود.'],
+ ['B','Here you go. Keep the change.','بفرمایید. باقی‌اش برای خودتان.']
+ ]},
+{id:'clothes',t:'Shopping for Clothes',tf:'خرید لباس',d:'پرو کردن، سایز و قیمت',ic:'👕',
+ l:[
+ ['A','Hello, can I help you find something?','سلام، می‌توانم در پیدا کردن چیزی کمک کنم؟'],
+ ['B','Yes, I am looking for a blue shirt.','بله، دنبال یک پیراهن آبی می‌گردم.'],
+ ['A','What size do you wear?','چه سایزی می‌پوشید؟'],
+ ['B','Medium, I think.','فکر می‌کنم متوسط.'],
+ ['A','Here is a nice one. Would you like to try it on?','این یکی قشنگ است. می‌خواهید پرو کنید؟'],
+ ['B','Yes, please. Where is the fitting room?','بله، لطفاً. اتاق پرو کجاست؟'],
+ ['A','It is right over there, next to the mirrors.','همان‌جا، کنار آینه‌ها.'],
+ ['B','Thanks. (After trying it on) It fits perfectly!','ممنون. (بعد از پرو) کاملاً اندازه است!'],
+ ['A','Great. It is on sale today, twenty percent off.','عالی. امروز تخفیف دارد، بیست درصد.'],
+ ['B','Perfect. I will take it.','عالی. می‌خرمش.']
+ ]},
+{id:'supermarket',t:'At the Supermarket',tf:'در سوپرمارکت',d:'پیدا کردن اجناس و پرداخت در صندوق',ic:'🛒',
+ l:[
+ ['A','Excuse me, where can I find the milk?','ببخشید، شیر را کجا می‌توانم پیدا کنم؟'],
+ ['B','It is in aisle five, next to the cheese.','در راهروی پنجم است، کنار پنیر.'],
+ ['A','Thank you. And where are the eggs?','متشکرم. تخم‌مرغ‌ها کجا هستند؟'],
+ ['B','They are in aisle three, near the bread.','در راهروی سوم هستند، نزدیک نان.'],
+ ['A','Perfect. Do you have a membership card?','عالی. کارت عضویت دارید؟'],
+ ['B','Yes, would you like to apply for one?','بله، می‌خواهید برای یکی درخواست دهید؟'],
+ ['A','Maybe next time. How much is everything?','شاید دفعه بعد. همه‌چیز چقدر شد؟'],
+ ['B','That comes to forty-two dollars.','چهل و دو دلار می‌شود.'],
+ ['A','Here is fifty. Can I have a bag, please?','این پنجاه. می‌توانم یک کیسه بگیرم، لطفاً؟'],
+ ['B','Of course. Here is your change and receipt.','البته. این هم باقی و رسید شما.']
+ ]},
+{id:'doctor',t:'At the Doctor\'s',tf:'پیش پزشک',d:'توضیح علائم بیماری و دریافت نسخه',ic:'🩺',
+ l:[
+ ['A','Good morning. What brings you in today?','صبح بخیر. امروز چه چیزی شما را اینجا آورد؟'],
+ ['B','I have had a headache for three days.','سه روز است که سردرد دارم.'],
+ ['A','I see. Do you have any other symptoms?','متوجه شدم. علائم دیگری هم دارید؟'],
+ ['B','Yes, I also have a sore throat and a fever.','بله، گلودرد و تب هم دارم.'],
+ ['A','Let me check your temperature. Open your mouth.','بگذارید دمایتان را چک کنم. دهانتان را باز کنید.'],
+ ['B','Is it serious, doctor?','جدی است، دکتر؟'],
+ ['A','No, it is just a common cold. Rest and drink fluids.','نه، فقط یک سرماخوردگی معمولی است. استراحت کنید و مایعات بنوشید.'],
+ ['B','Do I need any medicine?','دارویی لازم دارم؟'],
+ ['A','I will prescribe some. Take it twice a day.','چند دارو تجویز می‌کنم. روزی دو بار مصرف کنید.'],
+ ['B','Thank you, doctor.','متشکرم، دکتر.']
+ ]},
+{id:'pharmacy',t:'At the Pharmacy',tf:'در داروخانه',d:'خریدن دارو و پرسیدن درباره مصرف',ic:'💊',
+ l:[
+ ['A','Hello. How can I help you?','سلام. چطور می‌توانم کمک کنم؟'],
+ ['B','I need something for a cough.','چیزی برای سرفه لازم دارم.'],
+ ['A','Is it a dry cough or a chesty one?','سرفه خشک است یا خلط‌دار؟'],
+ ['B','It is dry, and it gets worse at night.','خشک است و شب‌ها بدتر می‌شود.'],
+ ['A','This syrup works well. Take one spoonful before bed.','این شربت خوب کار می‌کند. یک قاشق قبل از خواب بخورید.'],
+ ['B','Is it safe with other medications?','با داروهای دیگر بی‌خطر است؟'],
+ ['A','What else are you taking?','چه داروی دیگری مصرف می‌کنید؟'],
+ ['B','Just blood pressure pills.','فقط قرص فشار خون.'],
+ ['A','It should be fine. Do not take more than three days.','باید مشکلی نباشد. بیشتر از سه روز مصرف نکنید.'],
+ ['B','Okay, thank you. How much is it?','باشه، ممنون. چقدر می‌شود؟']
+ ]},
+{id:'airport',t:'At the Airport',tf:'در فرودگاه',d:'چک‌این، امنیت و سوار شدن',ic:'✈️',
+ l:[
+ ['A','Good afternoon. May I see your passport?','عصر بخیر. می‌توانم پاسپورتتان را ببینم؟'],
+ ['B','Here you are. I am flying to London.','بفرمایید. من به لندن پرواز می‌کنم.'],
+ ['A','Do you have any bags to check in?','چمدانی برای تحویل دارید؟'],
+ ['B','Yes, one large suitcase.','بله، یک چمدان بزرگ.'],
+ ['A','Please place it on the scale. Do you prefer a window or aisle seat?','لطفاً روی ترازو بگذارید. صندلی کنار پنجره می‌خواهید یا راهرو؟'],
+ ['B','A window seat, please.','صندلی کنار پنجره، لطفاً.'],
+ ['A','Here is your boarding pass. Gate 12, boarding at 4:30.','این هم کارت پرواز شما. دروازه ۱۲، سوار شدن ساعت ۴:۳۰.'],
+ ['B','What time does the flight depart?','پرواز چه ساعتی حرکت می‌کند؟'],
+ ['A','At 5:15. Please go through security now.','ساعت ۵:۱۵. لطفاً الان از امنیت عبور کنید.'],
+ ['B','Thank you very much.','بسیار متشکرم.']
+ ]},
+{id:'hotel',t:'Hotel Check-in',tf:'پذیرش هتل',d:'رزرو، دریافت کلید و پرسیدن امکانات',ic:'🏨',
+ l:[
+ ['A','Good evening. Do you have a reservation?','عصر بخیر. رزرو دارید؟'],
+ ['B','Yes, under the name Ali Rezaei.','بله، به نام علی رضایی.'],
+ ['A','Let me check. Yes, a double room for three nights.','بگذارید چک کنم. بله، یک اتاق دو نفره برای سه شب.'],
+ ['B','That is correct. Is breakfast included?','درست است. صبحانه شامل می‌شود؟'],
+ ['A','Yes, breakfast is served from 7 to 10 in the dining room.','بله، صبحانه از ساعت ۷ تا ۱۰ در سالن غذاخوری سرو می‌شود.'],
+ ['B','Great. What is the Wi-Fi password?','عالی. رمز وای‌فای چیست؟'],
+ ['A','It is on the card in your room. Here is your key, room 305.','روی کارت داخل اتاقتان است. این هم کلید شما، اتاق ۳۰۵.'],
+ ['B','Is there a gym in the hotel?','باشگاه ورزشی در هتل هست؟'],
+ ['A','Yes, on the second floor, open 24 hours.','بله، در طبقه دوم، ۲۴ ساعته باز است.'],
+ ['B','Perfect. Thank you.','عالی. متشکرم.']
+ ]},
+{id:'taxi',t:'Taking a Taxi',tf:'سوار شدن تاکسی',d:'گفتن مقصد و پرداخت کرایه',ic:'🚕',
+ l:[
+ ['A','Hello! Where to?','سلام! کجا؟'],
+ ['B','To the Grand Hotel, please.','به هتل گرند، لطفاً.'],
+ ['A','Sure. Is this your first time in the city?','حتماً. اولین بار است که به این شهر می‌آیید؟'],
+ ['B','Yes, I am here on business.','بله، برای کار اینجا هستم.'],
+ ['A','How long will you stay?','چند وقت می‌مانید؟'],
+ ['B','About a week. How far is the hotel?','حدود یک هفته. هتل چقدر دور است؟'],
+ ['A','About twenty minutes with this traffic.','با این ترافیک حدود بیست دقیقه.'],
+ ['B','Okay. Can you stop at a cash machine on the way?','باشه. می‌توانید در راه جلوی یک خودپرداز بایستید؟'],
+ ['A','Sure, there is one just around the corner.','حتماً، یکی همین نزدیکی سر خیابان هست.'],
+ ['B','Great. How much will it be?','عالی. چقدر می‌شود؟']
+ ]},
+{id:'phone',t:'Making a Phone Call',tf:'مکالمه تلفنی',d:'تماس گرفتن و پاسخ دادن به تلفن',ic:'📞',
+ l:[
+ ['A','Hello, this is Sara speaking.','سلام، سارا صحبت می‌کند.'],
+ ['B','Hi Sara, this is Ali. How are you?','سلام سارا، علی هستم. حالت چطور است؟'],
+ ['A','I am fine, thanks. How about you?','خوبم، ممنون. تو چطور؟'],
+ ['B','Not bad. Are you free this weekend?','بد نیستم. این آخر هفته آزادی؟'],
+ ['A','I think so. What did you have in mind?','فکر می‌کنم بله. چه در سر داری؟'],
+ ['B','Would you like to have dinner on Saturday?','دوست داری شنبه شام بخوریم؟'],
+ ['A','That sounds lovely. What time?','خیلی خوب به نظر می‌رسد. چه ساعتی؟'],
+ ['B','How about seven o\'clock at the Italian place?','ساعت هفت در رستوران ایتالیایی چطور است؟'],
+ ['A','Perfect. I will see you there.','عالی. آنجا می‌بینمت.'],
+ ['B','Great, see you Saturday. Bye!','عالی، شنبه می‌بینمت. خداحافظ!']
+ ]},
+{id:'bank',t:'At the Bank',tf:'در بانک',d:'افتتاح حساب، برداشت و سؤال درباره کارمزد',ic:'🏦',
+ l:[
+ ['A','Good morning. How can I help you?','صبح بخیر. چطور می‌توانم کمک کنم؟'],
+ ['B','I would like to open a savings account.','می‌خواهم یک حساب پس‌انداز باز کنم.'],
+ ['A','Do you have a photo ID and proof of address?','مدرک شناسایی عکس‌دار و اثبات آدرس دارید؟'],
+ ['B','Yes, here is my passport and a utility bill.','بله، این پاسپورت من و یک قبض خدمات است.'],
+ ['A','Perfect. Please fill out this form.','عالی. لطفاً این فرم را پر کنید.'],
+ ['B','Done. Is there a minimum balance?','انجام شد. حداقل موجودی وجود دارد؟'],
+ ['A','No minimum. There is a small monthly fee.','حداقل ندارد. یک کارمزد ماهانه کوچک هست.'],
+ ['B','Can I get a debit card with the account?','می‌توانم کارت نقدی همراه حساب بگیرم؟'],
+ ['A','Yes, it will arrive by mail in five business days.','بله، ظرف پنج روز کاری با پست می‌رسد.'],
+ ['B','Excellent. Thank you for your help.','عالی. ممنون از کمکتان.']
+ ]},
+{id:'interview',t:'Job Interview',tf:'مصاحبه کاری',d:'پاسخ به سؤالات رایج مصاحبه',ic:'💼',
+ l:[
+ ['A','Good morning. Please have a seat.','صبح بخیر. لطفاً بنشینید.'],
+ ['B','Thank you. It is a pleasure to meet you.','متشکرم. از آشنایی با شما خوشحالم.'],
+ ['A','Tell me a little about yourself.','کمی از خودتان بگویید.'],
+ ['B','I have five years of experience in marketing.','من پنج سال تجربه در بازاریابی دارم.'],
+ ['A','Why do you want to work here?','چرا می‌خواهید اینجا کار کنید؟'],
+ ['B','Your company has an excellent reputation.','شرکت شما شهرت عالی دارد.'],
+ ['A','What are your strengths?','نقاط قوت شما چیست؟'],
+ ['B','I am organized, reliable, and quick to learn.','من منظم، قابل اعتماد و سریع‌یادگیرنده هستم.'],
+ ['A','Do you have any questions for us?','سؤالی از ما دارید؟'],
+ ['B','Yes, what does a typical day look like?','بله، یک روز معمولی چه شکلی است؟']
+ ]},
+{id:'appointment',t:'Making an Appointment',tf:'گرفتن وقت قبلی',d:'وقت گرفتن از مطب، آرایشگاه یا دفتر',ic:'📅',
+ l:[
+ ['A','Good afternoon. City Dental Clinic.','عصر بخیر. کلینیک دندانپزشکی شهر.'],
+ ['B','Hi, I would like to make an appointment.','سلام، می‌خواهم وقت بگیرم.'],
+ ['A','Certainly. Have you been here before?','حتماً. قبلاً اینجا بوده‌اید؟'],
+ ['B','Yes, my name is Maryam Ahmadi.','بله، نام من مریم احمدی است.'],
+ ['A','I see you in our system. What is the problem?','شما را در سیستم می‌بینم. مشکل چیست؟'],
+ ['B','I have a toothache. It hurts a lot.','دندان‌درد دارم. خیلی درد می‌کند.'],
+ ['A','We have an opening tomorrow at 3 p.m.','فردا ساعت ۳ بعدازظهر وقت خالی داریم.'],
+ ['B','That works. Could it be a bit later?','خوب است. می‌شود کمی دیرتر باشد؟'],
+ ['A','How about 4:30?','ساعت ۴:۳۰ چطور؟'],
+ ['B','Perfect. See you tomorrow.','عالی. فردا می‌بینمتان.']
+ ]},
+{id:'help',t:'Asking for Help',tf:'درخواست کمک',d:'کمک خواستن در موقعیت‌های مختلف',ic:'🙋',
+ l:[
+ ['A','Excuse me, can you help me for a moment?','ببخشید، می‌توانید یک لحظه کمکم کنید؟'],
+ ['B','Sure, what is the problem?','حتماً، مشکل چیست؟'],
+ ['A','I cannot find my hotel. I think I am lost.','هتلم را پیدا نمی‌کنم. فکر می‌کنم گم شده‌ام.'],
+ ['B','Do you have the address?','آدرس را دارید؟'],
+ ['A','Yes, it is on this card.','بله، روی این کارت است.'],
+ ['B','Ah, that is just two streets away.','آه، فقط دو خیابان آن‌طرف‌تر است.'],
+ ['A','Really? Can you show me on the map?','واقعاً؟ می‌توانید روی نقشه نشانم دهید؟'],
+ ['B','Of course. Go left, then take the second right.','البته. به چپ بروید، بعد دومین کوچه را به راست بپیچید.'],
+ ['A','Thank you so much. You saved me!','بسیار متشکرم. نجاتم دادید!'],
+ ['B','No problem at all. Good luck!','خواهش می‌کنم. موفق باشید!']
+ ]},
+{id:'complain',t:'Making a Complaint',tf:'شکایت کردن',d:'مطرح کردن مشکل در هتل یا رستوران',ic:'😠',
+ l:[
+ ['A','Hello. Is everything okay with your room?','سلام. همه‌چیز در اتاقتان خوب است؟'],
+ ['B','Actually, no. The air conditioning is broken.','در واقع نه. کولر خراب است.'],
+ ['A','I am very sorry to hear that. When did you notice?','خیلی متأسفم. کِی متوجه شدید؟'],
+ ['B','Last night. The room is far too hot.','دیشب. اتاق بیش از حد گرم است.'],
+ ['A','We can send someone to fix it right away.','می‌توانیم همین حالا یک نفر برای تعمیر بفرستیم.'],
+ ['B','I would prefer to change rooms, if possible.','اگر ممکن است، ترجیح می‌دهم اتاق عوض کنم.'],
+ ['A','Let me check. Yes, we have another room available.','بگذارید چک کنم. بله، اتاق دیگری در دسترس داریم.'],
+ ['B','Thank you. I appreciate your help.','متشکرم. از کمکتان قدردانی می‌کنم.'],
+ ['A','Again, I apologize for the inconvenience.','باز هم برای این ناراحتی عذرخواهی می‌کنم.']
+ ]},
+{id:'post',t:'At the Post Office',tf:'در پستخانه',d:'فرستادن نامه و بسته',ic:'📮',
+ l:[
+ ['A','Next, please. What can I do for you?','نفر بعدی، لطفاً. چه کاری می‌توانم انجام دهم؟'],
+ ['B','I want to send this package to Iran.','می‌خواهم این بسته را به ایران بفرستم.'],
+ ['A','How would you like to send it?','چطور می‌خواهید بفرستید؟'],
+ ['B','What are the options?','چه گزینه‌هایی هست؟'],
+ ['A','Regular takes two weeks. Express takes four days.','معمولی دو هفته طول می‌کشد. اکسپرس چهار روز.'],
+ ['B','I will go with express. How much?','اکسپرس را انتخاب می‌کنم. چقدر می‌شود؟'],
+ ['A','That will be thirty-five dollars.','سی و پنج دلار می‌شود.'],
+ ['B','Here you are. Can I get a tracking number?','بفرمایید. می‌توانم شماره رهگیری بگیرم؟'],
+ ['A','Yes, it will be on your receipt.','بله، روی رسیدتان خواهد بود.'],
+ ['B','Great. Thank you very much.','عالی. بسیار متشکرم.']
+ ]},
+{id:'bye',t:'Saying Goodbye',tf:'خداحافظی',d:'پایان مکالمه و خداحافظی مؤدبانه',ic:'👋',
+ l:[
+ ['A','Well, I should get going. It is getting late.','خب، باید بروم. دارد دیر می‌شود.'],
+ ['B','Already? It was so nice seeing you.','همین حالا؟ از دیدنت خیلی خوشحال شدم.'],
+ ['A','Same here. We should do this again soon.','من هم همین‌طور. باید به‌زودی دوباره این کار را بکنیم.'],
+ ['B','Definitely. Give me a call next week.','قطعاً. هفته بعد بهم زنگ بزن.'],
+ ['A','I will. Say hello to your family for me.','حتماً. سلام من را به خانواده‌ات برسان.'],
+ ['B','Of course. Take care of yourself.','البته. مراقب خودت باش.'],
+ ['A','You too. Have a safe trip home.','تو هم همین‌طور. سفر بی‌خطری به خانه داشته باشی.'],
+ ['B','Thanks. See you soon!','ممنون. به‌زودی می‌بینمت!'],
+ ['A','See you! Bye!','می‌بینمت! خداحافظ!'],
+ ['B','Goodbye!','خداحافظ!']
+ ]}
+];
+
+/* ============================================================
+   5. GRAMMAR
+   ============================================================ */
+const GRAMMAR = {
+A1:[
+ {t:'ترتیب کلمات: انگلیسی SVO، فارسی SOV',b:`
+  <p>در فارسی می‌گوییم «من کتاب می‌خوانم» — یعنی <b>فاعل + مفعول + فعل</b>. اما انگلیسی دقیقاً برعکس عمل می‌کند:</p>
+  <div class="eg"><span class="en">I read a book.</span><span class="fa">من کتاب می‌خوانم.</span></div>
+  <p>ترتیب انگلیسی همیشه <b>فاعل + فعل + مفعول</b> است. فعل هرگز به آخر جمله نمی‌رود.</p>
+  <div class="warn-box">⚠️ رایج‌ترین خطای فارسی‌زبانان: «<span class="en">I a book read</span>» — این جمله غلط است.</div>
+  <div class="eg"><span class="en">She drinks tea.</span><span class="fa">او چای می‌نوشد.</span></div>`},
+ {t:'حروف تعریف a / an / the',b:`
+  <p>فارسی حرف تعریف ندارد — و همین باعث می‌شود این بخش برای فارسی‌زبانان سخت‌ترین قسمت انگلیسی باشد.</p>
+  <ul>
+    <li><b class="en">a / an</b> = «یک» نامعین، فقط برای اسم <b>مفرد و قابل شمارش</b>.</li>
+    <li><b class="en">the</b> = «آن / این» معین، وقتی شنونده می‌داند کدام چیز منظور است.</li>
+    <li>اسم جمع یا غیرقابل شمارش معمولاً بدون حرف می‌آید.</li>
+  </ul>
+  <div class="ok-box">✅ <b class="en">an</b> قبل از صدای واکه می‌آید، نه لزوماً حرف واکه: <span class="en">an hour</span> اما <span class="en">a university</span>.</div>`},
+ {t:'فعل to be: am / is / are',b:`
+  <p>معادل «هستم / هستی / است» در فارسی. در انگلیسی <b>همیشه</b> باید ذکر شود.</p>
+  <ul>
+    <li><span class="en">I <b>am</b></span> — من هستم</li>
+    <li><span class="en">You / We / They <b>are</b></span></li>
+    <li><span class="en">He / She / It <b>is</b></span></li>
+  </ul>
+  <div class="warn-box">⚠️ در فارسی می‌گوییم «او معلم است» ولی در انگلیسی نمی‌توان فعل را حذف کرد: <span class="en">She is a teacher.</span></div>`},
+ {t:'جمع اسم‌ها',b:`
+  <ul>
+    <li>معمولاً <b class="en">-s</b>: <span class="en">book → books</span></li>
+    <li>بعد از <span class="en">s, sh, ch, x</span> → <b class="en">-es</b>: <span class="en">box → boxes</span></li>
+    <li>حرف بی‌صدا + <span class="en">y</span> → <b class="en">-ies</b>: <span class="en">city → cities</span></li>
+  </ul>
+  <p><b>جمع‌های بی‌قاعده:</b> <span class="en">man → men, woman → women, child → children, foot → feet, tooth → teeth, person → people</span></p>
+  <div class="warn-box">⚠️ اسم‌های غیرقابل شمارش هرگز <b class="en">-s</b> نمی‌گیرند: <span class="en">water, rice, money, information, advice</span>.</div>`},
+ {t:'حال ساده (Present Simple)',b:`
+  <p>برای کارهای همیشگی، عادت‌ها و حقایق کلی.</p>
+  <div class="eg"><span class="en">I work in a bank.</span><span class="fa">من در بانک کار می‌کنم.</span></div>
+  <p>نکتهٔ کلیدی: با <b class="en">he / she / it</b> فعل <b class="en">-s</b> می‌گیرد:</p>
+  <div class="eg"><span class="en">She work<b>s</b> in a bank. / He go<b>es</b> to school.</span></div>
+  <p><b>منفی و سؤالی با do/does:</b></p>
+  <div class="eg"><span class="en">I don\u2019t like coffee. / Does she like tea?</span></div>`},
+ {t:'ضمایر و صفات ملکی',b:`
+  <p>فارسی‌زبانان اغلب <b class="en">he/she</b> را اشتباه می‌گیرند چون در فارسی هر دو «او» است.</p>
+  <ul>
+    <li><b>فاعلی:</b> <span class="en">I, you, he, she, it, we, they</span></li>
+    <li><b>مفعولی:</b> <span class="en">me, you, him, her, it, us, them</span></li>
+    <li><b>ملکی:</b> <span class="en">my, your, his, her, its, our, their</span></li>
+  </ul>
+  <div class="warn-box">⚠️ <span class="en">his</span> = مالِ مرد، <span class="en">her</span> = مالِ زن.</div>`}
+],
+A2:[
+ {t:'گذشته ساده (Past Simple)',b:`
+  <p>برای کارهای تمام‌شده در گذشته.</p>
+  <p><b>باقاعده:</b> فعل + <b class="en">-ed</b> → <span class="en">work → worked</span></p>
+  <p><b>بی‌قاعده (حفظی):</b> <span class="en">go → went, see → saw, eat → ate, come → came, buy → bought, have → had, do → did, make → made</span></p>
+  <div class="eg"><span class="en">I didn\u2019t go. / Did you see him?</span></div>
+  <div class="warn-box">⚠️ غلط رایج: <span class="en">I didn\u2019t went</span> ❌ — درست: <span class="en">I didn\u2019t go</span> ✅</div>`},
+ {t:'حال استمراری و گذشته استمراری',b:`
+  <p><b class="en">am / is / are + verb-ing</b> = کاری که <b>همین حالا</b> در جریان است.</p>
+  <div class="eg"><span class="en">She is reading a book right now.</span></div>
+  <p><b class="en">was / were + verb-ing</b> = کاری که در لحظه‌ای در گذشته در جریان بود.</p>
+  <div class="eg"><span class="en">I was watching TV when he called.</span></div>
+  <div class="warn-box">⚠️ فعل‌های حالتی مثل <span class="en">know, like, want, understand</span> معمولاً <b class="en">-ing</b> نمی‌گیرند.</div>`},
+ {t:'حروف اضافهٔ زمان و مکان',b:`
+  <ul>
+    <li><b class="en">in</b> — ماه، سال، فصل، شهر: <span class="en">in May, in 2024, in Tehran</span></li>
+    <li><b class="en">on</b> — روز و تاریخ: <span class="en">on Monday, on 5 May</span></li>
+    <li><b class="en">at</b> — ساعت و نقطهٔ دقیق: <span class="en">at 7 o\u2019clock, at the door</span></li>
+  </ul>
+  <p><b>for / since:</b> <span class="en">for</span> + مدت، <span class="en">since</span> + نقطهٔ شروع.</p>`},
+ {t:'افعال وجهی: can / must / should / have to',b:`
+  <ul>
+    <li><b class="en">can</b> — توانایی / اجازه</li>
+    <li><b class="en">must</b> — اجبار قوی</li>
+    <li><b class="en">have to</b> — اجبار بیرونی</li>
+    <li><b class="en">should</b> — توصیه</li>
+  </ul>
+  <div class="ok-box">✅ بعد از همهٔ افعال وجهی، فعل <b>بدون to و بدون s</b> می‌آید: <span class="en">She can go</span>.</div>
+  <p><b>منفی:</b> <span class="en">mustn\u2019t</span> = نباید (ممنوع) — <span class="en">don\u2019t have to</span> = لازم نیست.</p>`},
+ {t:'مقایسهٔ صفات',b:`
+  <p><b>صفات کوتاه:</b> + <b class="en">-er</b> / <b class="en">-est</b> → <span class="en">big → bigger → the biggest</span></p>
+  <p><b>صفات بلند:</b> <span class="en">more / the most</span> → <span class="en">more expensive</span></p>
+  <p><b>بی‌قاعده:</b> <span class="en">good → better → best</span>، <span class="en">bad → worse → worst</span></p>
+  <div class="warn-box">⚠️ هرگز دو مقایسه با هم به کار نبرید: <span class="en">more better</span> ❌</div>`},
+ {t:'آینده: will و going to',b:`
+  <p><b class="en">will</b> — تصمیم لحظه‌ای، پیش‌بینی، وعده:</p>
+  <div class="eg"><span class="en">I will call you tomorrow.</span></div>
+  <p><b class="en">going to</b> — نقشهٔ از قبل تعیین‌شده:</p>
+  <div class="eg"><span class="en">We are going to travel next month.</span></div>`}
+],
+B1:[
+ {t:'حال کامل (Present Perfect)',b:`
+  <p><b class="en">have / has + past participle</b> — پلی میان گذشته و حال.</p>
+  <ul>
+    <li>تجربهٔ زندگی: <span class="en">I have been to Paris.</span></li>
+    <li>کاری که تا حالا ادامه دارد: <span class="en">She has lived here for ten years.</span></li>
+    <li>نتیجهٔ مهم در حال: <span class="en">I have lost my keys.</span></li>
+  </ul>
+  <p><b>قیدهای همراه:</b> <span class="en">just, already, yet, ever, never, since, for</span></p>
+  <div class="warn-box">⚠️ با زمان مشخص گذشته (<span class="en">yesterday, last week</span>) هرگز حال کامل به کار نمی‌رود.</div>`},
+ {t:'شرطی نوع اول و دوم',b:`
+  <p><b>نوع اول:</b> <span class="en">If + present simple, will + verb</span></p>
+  <div class="eg"><span class="en">If it rains tomorrow, we will stay home.</span></div>
+  <p><b>نوع دوم:</b> <span class="en">If + past simple, would + verb</span></p>
+  <div class="eg"><span class="en">If I had more time, I would learn guitar.</span></div>
+  <div class="warn-box">⚠️ بعد از <span class="en">if</span> هرگز <span class="en">will</span> نمی‌آید: <span class="en">If it will rain</span> ❌</div>`},
+ {t:'مجهول (Passive Voice)',b:`
+  <p><b class="en">be + past participle</b> — وقتی فاعل مهم نیست یا ناشناخته است.</p>
+  <div class="eg"><span class="en">The letter was sent yesterday.</span></div>
+  <ul>
+    <li>حال ساده: <span class="en">English is spoken here.</span></li>
+    <li>گذشته: <span class="en">The bridge was built in 1990.</span></li>
+    <li>حال کامل: <span class="en">The report has been finished.</span></li>
+    <li>با وجهی: <span class="en">It must be done today.</span></li>
+  </ul>`},
+ {t:'افعال عبارتی (Phrasal Verbs)',b:`
+  <p>فعل + حرف اضافه/قید که معنای جدیدی می‌سازد.</p>
+  <ul>
+    <li><span class="en">give up</span> = رها کردن</li>
+    <li><span class="en">find out</span> = کشف کردن</li>
+    <li><span class="en">look after</span> = مراقبت کردن</li>
+    <li><span class="en">get along</span> = کنار آمدن</li>
+    <li><span class="en">put off</span> = به تعویق انداختن</li>
+    <li><span class="en">turn down</span> = رد کردن / کم کردن صدا</li>
+  </ul>
+  <div class="ok-box">✅ بهترین راه یادگیری: حفظ کردن در قالب جمله.</div>`},
+ {t:'نقل قول غیرمستقیم (Reported Speech)',b:`
+  <p>وقتی حرف کسی را بازگو می‌کنیم، زمان یک پله به عقب می‌رود:</p>
+  <div class="eg"><span class="en">"I am tired." → He said he <b>was</b> tired.</span></div>
+  <div class="eg"><span class="en">"I will come." → She said she <b>would</b> come.</span></div>
+  <div class="eg"><span class="en">"I went home." → He said he <b>had gone</b> home.</span></div>`},
+ {t:'حروف ربط: although, however, because, so',b:`
+  <ul>
+    <li><b class="en">although / even though</b> + جمله کامل</li>
+    <li><b class="en">however</b> — قید ربطی، با نقطه جدا می‌شود</li>
+    <li><b class="en">because</b> — دلیل</li>
+    <li><b class="en">so</b> — نتیجه</li>
+  </ul>
+  <div class="warn-box">⚠️ <span class="en">Although</span> و <span class="en">but</span> در یک جمله با هم نمی‌آیند.</div>`}
+],
+B2:[
+ {t:'گذشته کامل و گذشته کامل استمراری',b:`
+  <p><b class="en">had + past participle</b> — کاری که <b>قبل از</b> یک رخداد گذشته دیگر تمام شده بود.</p>
+  <div class="eg"><span class="en">By the time we arrived, the film had started.</span></div>
+  <p><b class="en">had been + verb-ing</b> — ادامهٔ یک کار تا لحظه‌ای در گذشته:</p>
+  <div class="eg"><span class="en">She had been waiting for two hours.</span></div>`},
+ {t:'شرطی نوع سوم و مختلط',b:`
+  <p><b>نوع سوم (پشیمانی):</b> <span class="en">If + had + p.p., would have + p.p.</span></p>
+  <div class="eg"><span class="en">If I had known, I would have come.</span></div>
+  <p><b>مختلط:</b> شرط در گذشته، نتیجه در حال:</p>
+  <div class="eg"><span class="en">If I had studied medicine, I would be a doctor now.</span></div>`},
+ {t:'وجهی‌های استنباطی (Modals of Deduction)',b:`
+  <ul>
+    <li><b class="en">must have + p.p.</b> — قطعاً چنین بوده</li>
+    <li><b class="en">might / may have + p.p.</b> — شاید</li>
+    <li><b class="en">can\u2019t have + p.p.</b> — غیرممکن است</li>
+    <li><b class="en">should have + p.p.</b> — باید انجام می‌داد ولی نداد</li>
+  </ul>`},
+ {t:'اسم‌سازی و ساختارهای اسمی',b:`
+  <p>در نوشتار آکادمیک، فعل‌ها و صفت‌ها به اسم تبدیل می‌شوند:</p>
+  <ul>
+    <li><span class="en">decide → decision</span></li>
+    <li><span class="en">analyse → analysis</span></li>
+    <li><span class="en">grow → growth</span></li>
+    <li><span class="en">fail → failure</span></li>
+  </ul>
+  <div class="eg"><span class="en">He failed because he was careless. → His failure was due to carelessness.</span></div>`},
+ {t:'هم‌آیندها (Collocations)',b:`
+  <ul>
+    <li><span class="en">make a decision</span> ✅ (نه <span class="en">take a decision</span>)</li>
+    <li><span class="en">do research</span> ✅</li>
+    <li><span class="en">take a photo</span> ✅</li>
+    <li><span class="en">pay attention to</span> ✅</li>
+    <li><span class="en">heavy rain</span> ✅ (نه <span class="en">strong rain</span>)</li>
+  </ul>`},
+ {t:'ساختارهای گزارش‌دهی و مجهول پیشرفته',b:`
+  <p>در متون رسمی و خبری، به‌جای «مردم می‌گویند...» از ساختار مجهول استفاده می‌شود:</p>
+  <ul>
+    <li><span class="en">It is said that he is rich.</span></li>
+    <li><span class="en">He is said to be rich.</span></li>
+    <li><span class="en">The company is reported to have lost millions.</span></li>
+    <li><span class="en">She is believed to have left the country.</span></li>
+  </ul>`}
+],
+C1:[
+ {t:'وارونگی (Inversion)',b:`
+  <p>در زبان رسمی، وقتی جمله با قید منفی آغاز می‌شود، جای فعل و فاعل عوض می‌شود.</p>
+  <ul>
+    <li><span class="en">Never <b>have I seen</b> such a thing.</span></li>
+    <li><span class="en">Not only <b>was he</b> late, but he also forgot the file.</span></li>
+    <li><span class="en">Hardly <b>had I sat down</b> when the phone rang.</span></li>
+    <li><span class="en">Rarely <b>does she</b> complain.</span></li>
+  </ul>`},
+ {t:'وجه التزامی (Subjunctive)',b:`
+  <p>پس از فعل‌ها و صفت‌های «الزامی»، فعل به شکل پایه می‌آید.</p>
+  <div class="eg"><span class="en">It is essential that he <b>be</b> present.</span></div>
+  <ul>
+    <li><span class="en">I suggest that she <b>take</b> the job.</span></li>
+    <li><span class="en">The doctor insisted that he <b>rest</b>.</span></li>
+  </ul>`},
+ {t:'جملات شکاف‌دار (Cleft Sentences)',b:`
+  <p>برای برجسته کردن بخشی از جمله:</p>
+  <div class="eg"><span class="en">Ali broke the window. → <b>It was Ali</b> who broke the window.</span></div>
+  <div class="eg"><span class="en">I need a holiday. → <b>What I need</b> is a holiday.</span></div>`},
+ {t:'زبان آکادمیک و احتیاط‌گرایی (Hedging)',b:`
+  <ul>
+    <li><span class="en">It could be argued that...</span></li>
+    <li><span class="en">The evidence suggests that...</span></li>
+    <li><span class="en">This may indicate...</span></li>
+    <li><span class="en">There is a tendency to...</span></li>
+  </ul>`},
+ {t:'اصطلاحات و سطح زبانی (Register)',b:`
+  <ul>
+    <li><b>غیررسمی:</b> <span class="en">I\u2019m gonna grab some grub.</span></li>
+    <li><b>خنثی:</b> <span class="en">I\u2019m going to get something to eat.</span></li>
+    <li><b>رسمی:</b> <span class="en">I shall have a meal shortly.</span></li>
+  </ul>
+  <p><b>اصطلاحات پیشرفته:</b></p>
+  <ul>
+    <li><span class="en">to be at odds with</span></li>
+    <li><span class="en">to shed light on</span></li>
+    <li><span class="en">to take for granted</span></li>
+    <li><span class="en">a double-edged sword</span></li>
+  </ul>`},
+ {t:'انسجام متن و ساختارهای موازی',b:`
+  <p>اجزای فهرست باید از نظر گرامری هم‌شکل باشند:</p>
+  <div class="eg"><span class="en">❌ She likes reading, to swim, and dancing.</span></div>
+  <div class="eg"><span class="en">✅ She likes reading, swimming, and dancing.</span></div>
+  <p><b>ابزارهای انسجام:</b></p>
+  <ul>
+    <li>افزودن: <span class="en">furthermore, moreover, in addition</span></li>
+    <li>تقابل: <span class="en">nevertheless, conversely</span></li>
+    <li>نتیجه: <span class="en">consequently, hence, therefore</span></li>
+  </ul>`}
+]
+};
+
+/* ============================================================
+   6. GRAMMAR QUIZ
+   ============================================================ */
+const GRAMMAR_Q = {
+A1:[
+ {q:'She ___ a doctor.',o:['is','are','am','be'],a:'is'},
+ {q:'I ___ two brothers.',o:['have','has','am','do'],a:'have'},
+ {q:'This is ___ apple.',o:['an','a','the','—'],a:'an'},
+ {q:'They ___ to school every day.',o:['go','goes','going','went'],a:'go'},
+ {q:'___ is your name?',o:['What','Who','Where','When'],a:'What'},
+ {q:'There ___ a book on the table.',o:['is','are','am','be'],a:'is'}
+],
+A2:[
+ {q:'I ___ to London last year.',o:['went','go','have gone','going'],a:'went'},
+ {q:'She ___ TV when I called her.',o:['was watching','watches','watched','is watching'],a:'was watching'},
+ {q:'You ___ smoke here. It is forbidden.',o:['mustn\u2019t','don\u2019t have to','can','should'],a:'mustn\u2019t'},
+ {q:'This book is ___ than that one.',o:['better','gooder','more good','best'],a:'better'},
+ {q:'I have lived here ___ 2019.',o:['since','for','from','ago'],a:'since'},
+ {q:'If it ___ tomorrow, we will stay home.',o:['rains','will rain','rained','raining'],a:'rains'}
+],
+B1:[
+ {q:'I ___ never been to Japan.',o:['have','has','had','am'],a:'have'},
+ {q:'The letter ___ yesterday.',o:['was sent','sent','is sent','has sent'],a:'was sent'},
+ {q:'He said he ___ tired.',o:['was','is','were','be'],a:'was'},
+ {q:'She is interested ___ art.',o:['in','on','at','for'],a:'in'},
+ {q:'___ he was tired, he finished the work.',o:['Although','But','However','Because'],a:'Although'},
+ {q:'I will not go ___ you come with me.',o:['unless','if','although','because'],a:'unless'}
+],
+B2:[
+ {q:'By the time we arrived, the film ___.',o:['had started','started','has started','was starting'],a:'had started'},
+ {q:'If I ___ known, I would have come.',o:['had','have','would have','did'],a:'had'},
+ {q:'He must ___ forgotten about the meeting.',o:['have','has','had','having'],a:'have'},
+ {q:'___ having studied hard, he failed the exam.',o:['Despite','Although','However','Because'],a:'Despite'},
+ {q:'The report needs ___ by Friday.',o:['to be finished','finishing','finish','finished'],a:'to be finished'},
+ {q:'You ___ told me earlier!',o:['should have','should','must','would'],a:'should have'}
+],
+C1:[
+ {q:'Not only ___ late, but he also forgot the documents.',o:['was he','he was','he is','is he'],a:'was he'},
+ {q:'It is essential that he ___ present at the meeting.',o:['be','is','was','were'],a:'be'},
+ {q:'___ was the weather that we stayed inside all day.',o:['Such','So','Too','Very'],a:'Such'},
+ {q:'Hardly ___ when the phone rang.',o:['had I sat down','I had sat down','did I sit','I sat'],a:'had I sat down'},
+ {q:'The proposal, ___ merits are clear, was approved.',o:['whose','which','that','of which'],a:'whose'},
+ {q:'___ I need is a quiet place to work.',o:['What','That','Which','It'],a:'What'}
+]
+};
+
+/* ============================================================
+   7. PRONUNCIATION SOUNDS
+   ============================================================ */
+const SOUNDS = [
+ {ipa:'/θ/',title:'th بی‌واک — مانند think',
+  fa:'این صدا در فارسی وجود ندارد. بیشتر فارسی‌زبانان آن را «س» یا «ت» تلفظ می‌کنند و همین باعث سوءتفاهم می‌شود.',
+  tip:'نوک زبان را کمی بین دندان‌های بالا و پایین قرار دهید و هوا را بیرون بدهید.',
+  pairs:[{a:'think',b:'sink',g:'فکر کردن / فرو رفتن'},{a:'three',b:'tree',g:'سه / درخت'},{a:'mouth',b:'mouse',g:'دهان / موش'}]},
+ {ipa:'/ð/',title:'th واک‌دار — مانند this',
+  fa:'این صدا هم در فارسی نیست. اغلب به «د» یا «ز» تبدیل می‌شود.',
+  tip:'مانند /θ/ ولی این بار تارهای صوتی می‌لرزند.',
+  pairs:[{a:'this',b:'dis',g:'این / (غلط)'},{a:'they',b:'day',g:'آن‌ها / روز'},{a:'mother',b:'mudder',g:'مادر / (غلط)'}]},
+ {ipa:'/w/',title:'w — مانند water',
+  fa:'در فارسی حرف «و» صدای /v/ می‌دهد، نه /w/.',
+  tip:'لب‌ها را گرد کنید و سریع باز کنید. دندان به لب نزنید.',
+  pairs:[{a:'water',b:'vater',g:'آب / (غلط)'},{a:'west',b:'vest',g:'غرب / جلیقه'},{a:'wine',b:'vine',g:'شراب / مو'}]},
+ {ipa:'/ŋ/',title:'ng — مانند sing',
+  fa:'مشکل اصلی اضافه کردن «گ» است: «سینگگ» به‌جای «سینگ».',
+  tip:'پشت زبان به نرم‌کام می‌چسبد و هوا از بینی بیرون می‌آید.',
+  pairs:[{a:'sing',b:'sin-g',g:'آواز خواندن'},{a:'singer',b:'sing-ger',g:'خواننده'},{a:'long',b:'lon-ga',g:'طولانی'}]},
+ {ipa:'/ɪ/ vs /iː/',title:'صدای کوتاه و بلند i',
+  fa:'فارسی بین «کشش» و «کسره» تفاوت طولی مهمی قائل نمی‌شود، اما در انگلیسی تفاوت معنایی می‌سازد.',
+  tip:'/ɪ/ کوتاه و شل است (ship)، /iː/ بلند و کشیده با لبخند (sheep).',
+  pairs:[{a:'ship',b:'sheep',g:'کشتی / گوسفند'},{a:'sit',b:'seat',g:'نشستن / صندلی'},{a:'fit',b:'feet',g:'مناسب / پاها'}]},
+ {ipa:'/æ/ vs /e/',title:'صدای a کوتاه و e',
+  fa:'در فارسی «بَد» و «بِد» تفاوت معنایی ندارند، ولی در انگلیسی bad و bed دو کلمهٔ کاملاً متفاوت‌اند.',
+  tip:'/æ/ دهان کاملاً باز و زبان پایین (bad). /e/ دهان نیمه‌باز (bed).',
+  pairs:[{a:'bad',b:'bed',g:'بد / تخت'},{a:'man',b:'men',g:'مرد / مردها'},{a:'sat',b:'set',g:'نشست / تنظیم کرد'}]},
+ {ipa:'/p/ vs /b/',title:'تفاوت p و b در پایان کلمه',
+  fa:'در فارسی این دو صدا در پایان کلمه به‌سختی از هم تفکیک می‌شوند.',
+  tip:'/p/ با فشار هوا و بدون لرزش حنجره، /b/ با لرزش حنجره.',
+  pairs:[{a:'cap',b:'cab',g:'کلاه / تاکسی'},{a:'rope',b:'robe',g:'طناب / ردای حمام'},{a:'mop',b:'mob',g:'تی / جمعیت'}]},
+ {ipa:'CC',title:'خوشه‌های همخوانی در آغاز کلمه',
+  fa:'فارسی در آغاز کلمه خوشهٔ دو همخوانی ندارد، پس فارسی‌زبانان یک واکه اضافه می‌کنند: «اِستریت».',
+  tip:'مستقیم با /s/ شروع کنید و هیچ صدایی قبل از آن اضافه نکنید.',
+  pairs:[{a:'street',b:'e-street',g:'خیابان'},{a:'speak',b:'e-speak',g:'صحبت کردن'},{a:'school',b:'e-school',g:'مدرسه'}]},
+ {ipa:'-ed',title:'تلفظ پایانهٔ -ed',
+  fa:'این پایانه سه تلفظ متفاوت دارد و فارسی‌زبانان معمولاً همه را «اِد» می‌خوانند.',
+  tip:'بعد از صداهای بی‌واک → /t/؛ بعد از واک‌دار → /d/؛ بعد از t یا d → /ɪd/.',
+  pairs:[{a:'walked',b:'/wɔːkt/',g:'راه رفت'},{a:'played',b:'/pleɪd/',g:'بازی کرد'},{a:'wanted',b:'/ˈwɒntɪd/',g:'خواست'}]},
+ {ipa:'-s',title:'تلفظ پایانهٔ جمع -s',
+  fa:'مانند -ed، سه تلفظ دارد: /s/، /z/ و /ɪz/.',
+  tip:'بعد از صداهای بی‌واک → /s/، بعد از واک‌دار → /z/، بعد از صداهای صفیری → /ɪz/.',
+  pairs:[{a:'cats',b:'/kæts/',g:'گربه‌ها'},{a:'dogs',b:'/dɒgz/',g:'سگ‌ها'},{a:'boxes',b:'/ˈbɒksɪz/',g:'جعبه‌ها'}]},
+ {ipa:'/ə/',title:'واکهٔ خنثی (Schwa)',
+  fa:'فارسی هر هجا را کامل تلفظ می‌کند، اما انگلیسی هجاهای بی‌استرس را می‌خورد و به /ə/ تبدیل می‌کند.',
+  tip:'در «banana» فقط هجای دوم استرس دارد: /bəˈnɑːnə/.',
+  pairs:[{a:'banana',b:'/bəˈnɑːnə/',g:'موز'},{a:'about',b:'/əˈbaʊt/',g:'درباره'},{a:'photograph',b:'/ˈfəʊtəɡrɑːf/',g:'عکس'}]},
+ {ipa:'ˈ',title:'استرس کلمه',
+  fa:'جای استرس می‌تواند معنای کلمه را عوض کند و در فارسی چنین چیزی وجود ندارد.',
+  tip:'هجای stressed بلندتر، واضح‌تر و با صدای بلندتر تلفظ می‌شود.',
+  pairs:[{a:'PREsent',b:'preSENT',g:'هدیه / ارائه دادن'},{a:'REcord',b:'reCORD',g:'رکورد / ضبط کردن'},{a:'PHOtograph',b:'phoTOgrapher',g:'عکس / عکاس'}]}
+];
+
+/* ============================================================
+   8. STATE
+   ============================================================ */
+const state = {
+  level: localStorage.getItem('efp_level') || 'A1',
+  view: 'home',
+  search: '',
+  search504: '',
+  w504Lesson: 0,
+  openAcc: -1,
+  openConvo: null,
+  cardIdx: 0,
+  flipped: false,
+  cardSource: 'vocab',
+  quiz: null,
+  soundsOpen: 0,
+  rate: parseFloat(localStorage.getItem('efp_rate') || '0.85'),
+  progress: JSON.parse(localStorage.getItem('efp_progress') || 'null') || {learned:{}, best:{}, w504:[]}
+};
+LEVELS.forEach(l=>{ if(!state.progress.learned[l]) state.progress.learned[l]=[]; });
+if(!state.progress.w504) state.progress.w504 = [];
+
+function save(){ localStorage.setItem('efp_progress', JSON.stringify(state.progress)); }
+function saveLevel(){ localStorage.setItem('efp_level', state.level); }
+function saveRate(){ localStorage.setItem('efp_rate', state.rate); }
+
+/* ============================================================
+   9. HELPERS
+   ============================================================ */
+const app = document.getElementById('app');
+const $ = s => document.querySelector(s);
+
+function esc(s){ return String(s).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function shuffle(a){ const r=[...a]; for(let i=r.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[r[i],r[j]]=[r[j],r[i]];} return r; }
+
+let toastTimer;
+function toast(msg){
+  const t = $('#toast'); t.textContent = msg; t.classList.add('show');
+  clearTimeout(toastTimer); toastTimer = setTimeout(()=>t.classList.remove('show'), 1800);
+}
+
+/* ---------- AUDIO ENGINE ---------- */
+let voicesLoaded = false;
+function loadVoices(){
+  if(!('speechSynthesis' in window)) return [];
+  const vs = window.speechSynthesis.getVoices();
+  if(vs.length > 0) voicesLoaded = true;
+  return vs;
+}
+if('speechSynthesis' in window){
+  loadVoices();
+  window.speechSynthesis.onvoiceschanged = loadVoices;
+}
+
+function speak(text, rate){
+  if(!('speechSynthesis' in window)){ toast('مرورگر شما از تلفظ پشتیبانی نمی‌کند'); return; }
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = 'en-US';
+  u.rate = rate || state.rate;
+  u.pitch = 1;
+  const vs = window.speechSynthesis.getVoices();
+  const v = vs.find(x=>x.lang==='en-US') || vs.find(x=>x.lang.startsWith('en-GB')) || vs.find(x=>x.lang.startsWith('en'));
+  if(v) u.voice = v;
+  window.speechSynthesis.speak(u);
+}
+
+let playAllToken = 0;
+function playAll(lines, onDone){
+  if(!('speechSynthesis' in window)){ toast('مرورگر شما از تلفظ پشتیبانی نمی‌کند'); return; }
+  window.speechSynthesis.cancel();
+  const token = ++playAllToken;
+  let i = 0;
+  function next(){
+    if(token !== playAllToken) return;
+    if(i >= lines.length){ onDone && onDone(); return; }
+    const u = new SpeechSynthesisUtterance(lines[i].en);
+    u.lang = 'en-US'; u.rate = state.rate;
+    const vs = window.speechSynthesis.getVoices();
+    const v = vs.find(x=>x.lang==='en-US') || vs.find(x=>x.lang.startsWith('en'));
+    if(v) u.voice = v;
+    u.onend = ()=>{ i++; setTimeout(()=>{ if(token===playAllToken) next(); }, 280); };
+    u.onerror = ()=>{ i++; if(token===playAllToken) next(); };
+    window.speechSynthesis.speak(u);
+  }
+  next();
+}
+function stopAll(){ playAllToken++; if('speechSynthesis' in window) window.speechSynthesis.cancel(); }
+
+function learnedList(lv){ return state.progress.learned[lv] || []; }
+function isLearned(lv, en){ return learnedList(lv).includes(en); }
+function toggleLearned(lv, en){
+  const arr = learnedList(lv);
+  const i = arr.indexOf(en);
+  if(i>-1) arr.splice(i,1); else arr.push(en);
+  state.progress.learned[lv] = arr;
+  save();
+}
+function levelPct(lv){
+  const total = VOCAB[lv].length;
+  const done = learnedList(lv).length;
+  return {done, total, pct: total? Math.round(done/total*100):0};
+}
+function w504Learned(){ return state.progress.w504; }
+function isLearned504(en){ return state.progress.w504.includes(en); }
+function toggle504(en){
+  const arr = state.progress.w504;
+  const i = arr.indexOf(en);
+  if(i>-1) arr.splice(i,1); else arr.push(en);
+  save();
+}
+
+/* ============================================================
+   10. CHROME
+   ============================================================ */
+const TABS = [
+  {id:'home',    ic:'🏠', label:'خانه'},
+  {id:'vocab',   ic:'📚', label:'واژگان'},
+  {id:'w504',    ic:'⭐', label:'۵۰۴ واژه'},
+  {id:'convos',  ic:'💬', label:'مکالمه'},
+  {id:'grammar', ic:'📖', label:'گرامر'},
+  {id:'cards',   ic:'🃏', label:'فلش‌کارت'},
+  {id:'quiz',    ic:'✍️', label:'آزمون'},
+  {id:'sounds',  ic:'🔊', label:'تلفظ'},
+  {id:'stats',   ic:'📊', label:'پیشرفت'}
+];
+
+function renderChrome(){
+  $('#levels').innerHTML = LEVELS.map(l=>{
+    const p = levelPct(l);
+    return `<button class="chip ${state.level===l?'on':''}" data-lv="${l}" title="${LEVEL_NAMES[l]} — ${p.pct}%">${l}</button>`;
+  }).join('');
+  $('#tabs').innerHTML = TABS.map(t=>
+    `<button data-view="${t.id}" class="${state.view===t.id?'on':''}"><span class="ic">${t.ic}</span>${t.label}</button>`
+  ).join('');
+
+  $('#levels').querySelectorAll('[data-lv]').forEach(b=>b.onclick=()=>{
+    state.level = b.dataset.lv; saveLevel();
+    state.cardIdx = 0; state.flipped = false; state.quiz = null; state.openAcc = -1;
+    render();
+  });
+  $('#tabs').querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>{
+    stopAll();
+    state.view = b.dataset.view;
+    if(state.view==='cards'){ state.cardIdx=0; state.flipped=false; }
+    render();
+  });
+}
+
+/* ============================================================
+   11. VIEWS
+   ============================================================ */
+function render(){
+  renderChrome();
+  const v = state.view;
+  if(v==='home') renderHome();
+  else if(v==='vocab') renderVocab();
+  else if(v==='w504') render504();
+  else if(v==='convos') renderConvos();
+  else if(v==='grammar') renderGrammar();
+  else if(v==='cards') renderCards();
+  else if(v==='quiz') renderQuiz();
+  else if(v==='sounds') renderSounds();
+  else if(v==='stats') renderStats();
+}
+
+/* ---------- HOME ---------- */
+function renderHome(){
+  const p = levelPct(state.level);
+  const best = state.progress.best[state.level];
+  const totalLearned = LEVELS.reduce((s,l)=>s+learnedList(l).length,0);
+  const totalWords = LEVELS.reduce((s,l)=>s+VOCAB[l].length,0);
+  const w504done = w504Learned().length;
+
+  app.innerHTML = `
+  <div class="hero">
+    <h1>انگلیسی را از صفر تا پیشرفته یاد بگیر</h1>
+    <p>برنامهٔ آموزشی کامل برای <b>فارسی‌زبانان</b> — واژگان سطح‌بندی‌شده (A1 تا C1)، <b>۵۰۴ واژهٔ ضروری</b>، <b>۲۰ مکالمهٔ روزمره</b>، گرامر به فارسی، تمرین تلفظ، و تلفظ صوتی همهٔ واژه‌ها و جملات.</p>
+  </div>
+
+  <div class="stat-grid">
+    <div class="stat"><b>${p.pct}%</b><span>پیشرفت سطح ${state.level} (${LEVEL_NAMES[state.level]})</span></div>
+    <div class="stat"><b>${w504done}/504</b><span>واژهٔ ۵۰۴ آموخته‌شده</span></div>
+    <div class="stat"><b>${best!=null? best+'%':'—'}</b><span>بهترین نمرهٔ آزمون این سطح</span></div>
+    <div class="stat"><b>${totalLearned}</b><span>واژگان سطح‌بندی‌شده از ${totalWords}</span></div>
+  </div>
+
+  <div class="card">
+    <h2 class="sec">از کجا شروع کنم؟</h2>
+    <p class="sub">یک جلسهٔ ۲۰ دقیقه‌ای پیشنهادی</p>
+    <div style="display:flex;gap:9px;flex-wrap:wrap">
+      <button class="btn" data-go="vocab">📚 واژگان سطح ${state.level}</button>
+      <button class="btn ghost" data-go="w504">⭐ ۵۰۴ واژهٔ ضروری</button>
+      <button class="btn ghost" data-go="convos">💬 مکالمه‌های روزمره</button>
+      <button class="btn ghost" data-go="cards">🃏 فلش‌کارت</button>
+      <button class="btn ghost" data-go="quiz">✍️ آزمون</button>
+      <button class="btn ghost" data-go="sounds">🔊 تمرین تلفظ</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 class="sec">💬 مکالمه‌های روزمره</h2>
+    <p class="sub">۲۰ موقعیت واقعی — با ترجمهٔ فارسی و پخش صوتی خط به خط</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:9px">
+      ${CONVOS.map(c=>`<button class="btn ghost sm" data-convo="${c.id}" style="justify-content:flex-start;text-align:right;padding:11px 13px">${c.ic} ${esc(c.tf)}</button>`).join('')}
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 class="sec">مسیر یادگیری</h2>
+    <p class="sub">پنج سطح استاندارد CEFR — از مبتدی تا پیشرفته</p>
+    <div class="pgrid">
+      ${LEVELS.map(l=>{
+        const q = levelPct(l);
+        return `<div class="prow" style="cursor:pointer" data-jump="${l}">
+          <span class="lbl">${l}</span>
+          <div class="bar"><i style="width:${q.pct}%"></i></div>
+          <span class="val">${q.pct}%</span>
+        </div>
+        <div style="font-size:12px;color:var(--muted);margin:-6px 0 6px 47px">${LEVEL_NAMES[l]} — ${VOCAB[l].length} واژه، ${GRAMMAR[l].length} درس گرامر</div>`;
+      }).join('')}
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 class="sec">💡 چرا این برنامه برای فارسی‌زبانان متفاوت است؟</h2>
+    <ul style="margin:10px 18px 0 0;padding-inline-start:16px;font-size:14px">
+      <li><b>تلفظ صوتی</b> همهٔ واژه‌ها، مثال‌ها و خطوط مکالمه با یک کلیک</li>
+      <li>توضیح گرامر <b>به زبان فارسی</b> با تمرکز بر تفاوت‌های ساختاری</li>
+      <li>بخش <b>۵۰۴ واژهٔ ضروری</b> با تلفظ، معنی و مثال</li>
+      <li><b>۲۰ مکالمهٔ روزمره</b> در موقعیت‌های واقعی: رستوران، فرودگاه، دکتر، بانک و...</li>
+      <li>تمرین <b>صداهایی که در فارسی وجود ندارند</b>: /θ/, /ð/, /w/, /ŋ/</li>
+      <li>هشدار دربارهٔ <b>خطاهای رایج فارسی‌زبانان</b> در هر درس</li>
+    </ul>
+  </div>`;
+
+  app.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>{ state.view=b.dataset.go; if(b.dataset.go==='cards'){state.cardIdx=0;state.flipped=false;} render(); });
+  app.querySelectorAll('[data-jump]').forEach(b=>b.onclick=()=>{ state.level=b.dataset.jump; saveLevel(); render(); });
+  app.querySelectorAll('[data-convo]').forEach(b=>b.onclick=()=>{
+    state.view='convos';
+    state.openConvo = b.dataset.convo;
+    render();
+  });
+}
+
+/* ---------- VOCAB ---------- */
+function renderVocab(){
+  const all = VOCAB[state.level];
+  const q = state.search.trim().toLowerCase();
+  const list = q ? all.filter(w=> w.en.toLowerCase().includes(q) || w.fa.includes(state.search.trim())) : all;
+  const p = levelPct(state.level);
+
+  app.innerHTML = `
+  <div class="card" style="padding:16px 18px">
+    <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+      <h2 class="sec" style="margin:0">واژگان سطح ${state.level}</h2>
+      <span class="pill">${LEVEL_NAMES[state.level]}</span>
+      <span class="pill green">${p.done} آموخته‌شده</span>
+      <span class="pill gray">${p.total} واژه</span>
+    </div>
+    <div class="bar" style="margin-top:12px"><i style="width:${p.pct}%"></i></div>
+  </div>
+
+  <div class="toolbar">
+    <input class="search" id="searchBox" placeholder="جست‌وجو در انگلیسی یا فارسی..." value="${esc(state.search)}">
+    <button class="btn ghost sm" id="learnAllBtn">همه را آموخته کن</button>
+    <button class="btn ghost sm" id="speedBtn">🐢 سرعت: ${state.rate.toFixed(2)}</button>
+  </div>
+
+  <div id="wordList">
+  ${list.length===0 ? `<div class="empty"><div class="em">🔍</div>واژه‌ای با این جست‌وجو پیدا نشد.</div>` :
+    list.map(w=>{
+      const done = isLearned(state.level, w.en);
+      return `<div class="word ${done?'done':''}">
+        <div class="word-head">
+          <button class="spk" data-say="${esc(w.en)}" title="تلفظ">🔊</button>
+          <span class="word-en">${esc(w.en)}</span>
+          <span class="word-pr">${esc(w.pr)}</span>
+          <span class="word-fa">${esc(w.fa)}</span>
+        </div>
+        <div class="word-ex">
+          <span class="en">${esc(w.ex)}</span>
+          <button class="spk sm" data-say="${esc(w.ex)}" style="vertical-align:middle;margin-inline-start:6px">🔊</button>
+          <br><span>${esc(w.exFa)}</span>
+        </div>
+        <label class="chk"><input type="checkbox" data-learn="${esc(w.en)}" ${done?'checked':''}> آموختم</label>
+      </div>`;
+    }).join('')}
+  </div>`;
+
+  $('#searchBox').oninput = e=>{
+    state.search = e.target.value;
+    const pos = e.target.selectionStart;
+    renderVocab();
+    const s = $('#searchBox'); if(s){ s.focus(); s.setSelectionRange(pos,pos); }
+  };
+  $('#learnAllBtn').onclick = ()=>{
+    state.progress.learned[state.level] = all.map(w=>w.en);
+    save(); renderVocab(); toast('همهٔ واژه‌ها آموخته علامت خوردند');
+  };
+  $('#speedBtn').onclick = ()=>{
+    state.rate = state.rate >= 0.9 ? 0.6 : 0.9;
+    saveRate(); renderVocab(); toast(state.rate<0.7 ? '🐢 تلفظ آرام' : '🎧 تلفظ معمولی');
+  };
+  app.querySelectorAll('[data-say]').forEach(b=>b.onclick=e=>{ e.stopPropagation(); speak(b.dataset.say); });
+  app.querySelectorAll('[data-learn]').forEach(c=>c.onchange=()=>{
+    toggleLearned(state.level, c.dataset.learn);
+    toast(`پیشرفت: ${levelPct(state.level).pct}%`);
+    c.closest('.word').classList.toggle('done', c.checked);
+  });
+}
+
+/* ---------- 504 ---------- */
+function render504(){
+  const total = W504.length;
+  const done = w504Learned().length;
+  const pct = Math.round(done/total*100);
+  const q = state.search504.trim().toLowerCase();
+  const list = q ? W504.filter(w=> w.en.toLowerCase().includes(q) || w.fa.includes(state.search504.trim()) || w.pr.toLowerCase().includes(q)) : W504;
+
+  // group by lesson
+  const lessons = {};
+  list.forEach(w=>{ (lessons[w.lesson] = lessons[w.lesson] || []).push(w); });
+
+  app.innerHTML = `
+  <div class="card" style="padding:16px 18px">
+    <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+      <h2 class="sec" style="margin:0">⭐ ۵۰۴ واژهٔ ضروری</h2>
+      <span class="pill">۵۰۴ Absolutely Essential Words</span>
+      <span class="pill green">${done} آموخته‌شده</span>
+    </div>
+    <p class="sub" style="margin:8px 0 0">واژه‌های پایه و ضروری انگلیسی با تلفظ، معنی فارسی و مثال — گروه‌بندی‌شده در ۴۲ درس ۱۲تایی. روی واژه یا مثال بزنید تا تلفظش را بشنوید.</p>
+    <div class="bar" style="margin-top:12px"><i style="width:${pct}%"></i></div>
+  </div>
+
+  <div class="toolbar">
+    <input class="search" id="search504Box" placeholder="جست‌وجو در ۵۰۴ واژه..." value="${esc(state.search504)}">
+    <button class="btn ghost sm" id="speed504Btn">🐢 سرعت: ${state.rate.toFixed(2)}</button>
+    <button class="btn ghost sm" id="clear504">پاک کردن علامت‌ها</button>
+  </div>
+
+  ${Object.keys(lessons).sort((a,b)=>a-b).map(lesson=>{
+    const words = lessons[lesson];
+    const lessonDone = words.filter(w=>isLearned504(w.en)).length;
+    return `
+    <div class="acc ${state.w504Lesson==lesson?'open':''}" data-lesson="${lesson}">
+      <button class="acc-h">
+        <span class="num">${lesson}</span>
+        <span>درس ${lesson} — ${words.length} واژه</span>
+        <span class="pill gray" style="margin-inline-start:auto">${lessonDone}/${words.length}</span>
+        <span class="arw" style="margin-inline-start:8px">▼</span>
+      </button>
+      <div class="acc-b"><div class="acc-inner" style="padding-inline:0">
+        ${words.map(w=>{
+          const isDone = isLearned504(w.en);
+          return `<div class="word ${isDone?'done':''}" style="margin:10px 17px">
+            <div class="word-head">
+              <button class="spk" data-say="${esc(w.en)}" title="تلفظ">🔊</button>
+              <span class="word-en">${esc(w.en)}</span>
+              <span class="word-pr">${esc(w.pr)}</span>
+              <span class="word-fa">${esc(w.fa)}</span>
+            </div>
+            <div class="word-ex">
+              <span class="en">${esc(w.ex)}</span>
+              <button class="spk sm" data-say="${esc(w.ex)}" style="vertical-align:middle;margin-inline-start:6px">🔊</button>
+            </div>
+            <label class="chk"><input type="checkbox" data-learn504="${esc(w.en)}" ${isDone?'checked':''}> آموختم</label>
+          </div>`;
+        }).join('')}
+      </div></div>
+    </div>`;
+  }).join('')}
+
+  ${list.length===0 ? `<div class="empty"><div class="em">🔍</div>واژه‌ای پیدا نشد.</div>`:''}`;
+
+  $('#search504Box').oninput = e=>{
+    state.search504 = e.target.value;
+    const pos = e.target.selectionStart;
+    render504();
+    const s = $('#search504Box'); if(s){ s.focus(); s.setSelectionRange(pos,pos); }
+  };
+  $('#speed504Btn').onclick = ()=>{
+    state.rate = state.rate >= 0.9 ? 0.6 : 0.9;
+    saveRate(); render504(); toast(state.rate<0.7 ? '🐢 تلفظ آرام' : '🎧 تلفظ معمولی');
+  };
+  $('#clear504').onclick = ()=>{
+    if(confirm('همهٔ علامت‌های ۵۰۴ پاک شوند؟')){
+      state.progress.w504 = []; save(); render504(); toast('علامت‌ها پاک شد');
+    }
+  };
+  app.querySelectorAll('[data-lesson]').forEach(el=>{
+    el.querySelector('.acc-h').onclick = ()=>{
+      const n = +el.dataset.lesson;
+      state.w504Lesson = state.w504Lesson===n ? 0 : n;
+      render504();
+    };
+  });
+  app.querySelectorAll('[data-say]').forEach(b=>b.onclick=e=>{ e.stopPropagation(); speak(b.dataset.say); });
+  app.querySelectorAll('[data-learn504]').forEach(c=>c.onchange=()=>{
+    toggle504(c.dataset.learn504);
+    c.closest('.word').classList.toggle('done', c.checked);
+    toast(`۵۰۴: ${w504Learned().length} از ۵۰۴`);
+  });
+}
+
+/* ---------- CONVERSATIONS ---------- */
+function renderConvos(){
+  app.innerHTML = `
+  <div class="card" style="padding:16px 18px">
+    <h2 class="sec" style="margin:0">💬 مکالمه‌های روزمره</h2>
+    <p class="sub" style="margin:6px 0 0">${CONVOS.length} موقعیت واقعی — هر خط را می‌توانید جداگانه بشنوید یا کل مکالمه را پخش کنید. با ترجمهٔ فارسی.</p>
+  </div>
+
+  ${CONVOS.map(c=>{
+    const open = state.openConvo === c.id;
+    return `
+    <div class="convo ${open?'open':''}" data-convo="${c.id}">
+      <div class="convo-h">
+        <div class="ico">${c.ic}</div>
+        <div class="txt">
+          <b>${esc(c.t)}</b>
+          <small>${esc(c.tf)} — ${esc(c.d)}</small>
+        </div>
+        <span class="arw">▼</span>
+      </div>
+      <div class="convo-b">
+        <div class="convo-inner">
+          <div class="convo-tools">
+            <button class="btn sm" data-playall="${c.id}">▶️ پخش کل مکالمه</button>
+            <button class="btn ghost sm" data-stopall="1">⏹ توقف</button>
+            <button class="btn ghost sm" data-slow="${c.id}">🐢 پخش آرام</button>
+          </div>
+          ${c.l.map(([who, en, fa], i)=>`
+            <div class="line ${who.toLowerCase()}">
+              <div class="who">${who}</div>
+              <div class="body">
+                <div class="en-line">
+                  <span>${esc(en)}</span>
+                  <button class="spk-line" data-say="${esc(en)}" title="تلفظ">🔊</button>
+                </div>
+                <div class="fa-line">${esc(fa)}</div>
+              </div>
+            </div>`).join('')}
+        </div>
+      </div>
+    </div>`;
+  }).join('')}`;
+
+  app.querySelectorAll('[data-convo]').forEach(el=>{
+    el.querySelector('.convo-h').onclick = ()=>{
+      const id = el.dataset.convo;
+      state.openConvo = state.openConvo===id ? null : id;
+      stopAll();
+      renderConvos();
+    };
+  });
+  app.querySelectorAll('[data-say]').forEach(b=>b.onclick=e=>{ e.stopPropagation(); speak(b.dataset.say); });
+  app.querySelectorAll('[data-playall]').forEach(b=>b.onclick=()=>{
+    const c = CONVOS.find(x=>x.id===b.dataset.playall);
+    if(!c) return;
+    const lines = c.l.map(x=>({en: x[1]}));
+    const origRate = state.rate;
+    playAll(lines, ()=>{ toast('پایان مکالمه ✅'); });
+  });
+  app.querySelectorAll('[data-slow]').forEach(b=>b.onclick=()=>{
+    const c = CONVOS.find(x=>x.id===b.dataset.slow);
+    if(!c) return;
+    const orig = state.rate; state.rate = 0.6;
+    const lines = c.l.map(x=>({en: x[1]}));
+    playAll(lines, ()=>{ state.rate = orig; toast('پایان مکالمه ✅'); });
+  });
+  app.querySelectorAll('[data-stopall]').forEach(b=>b.onclick=()=>{ stopAll(); toast('متوقف شد'); });
+}
+
+/* ---------- GRAMMAR ---------- */
+function renderGrammar(){
+  const list = GRAMMAR[state.level];
+  app.innerHTML = `
+  <div class="card" style="padding:16px 18px">
+    <h2 class="sec" style="margin:0">گرامر سطح ${state.level}</h2>
+    <p class="sub" style="margin:6px 0 0">${LEVEL_NAMES[state.level]} — ${list.length} درس، توضیح‌داده‌شده به فارسی با تمرکز بر خطاهای رایج فارسی‌زبانان</p>
+  </div>
+  ${list.map((g,i)=>`
+    <div class="acc ${state.openAcc===i?'open':''}" data-acc="${i}">
+      <button class="acc-h"><span class="num">${i+1}</span><span>${esc(g.t)}</span><span class="arw">▼</span></button>
+      <div class="acc-b"><div class="acc-inner">${g.b}</div></div>
+    </div>`).join('')}`;
+
+  app.querySelectorAll('[data-acc]').forEach(el=>{
+    el.querySelector('.acc-h').onclick = ()=>{
+      const i = +el.dataset.acc;
+      state.openAcc = state.openAcc===i ? -1 : i;
+      renderGrammar();
+    };
+  });
+}
+
+/* ---------- FLASHCARDS ---------- */
+function renderCards(){
+  const source = state.cardSource || 'vocab';
+  const words = source === '504'
+    ? W504.map(w=>({en:w.en, pr:w.pr, fa:w.fa, ex:w.ex, exFa:''}))
+    : VOCAB[state.level];
+  if(state.cardIdx >= words.length) state.cardIdx = 0;
+  const w = words[state.cardIdx];
+  const done = source === '504' ? isLearned504(w.en) : isLearned(state.level, w.en);
+
+  app.innerHTML = `
+  <div class="card" style="padding:16px 18px">
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+      <h2 class="sec" style="margin:0">فلش‌کارت</h2>
+      <span class="pill">${state.cardIdx+1} از ${words.length}</span>
+      <div style="margin-inline-start:auto;display:flex;gap:6px">
+        <button class="chip ${source==='vocab'?'on':''}" data-src="vocab">سطح ${state.level}</button>
+        <button class="chip ${source==='504'?'on':''}" data-src="504">۵۰۴</button>
+      </div>
+    </div>
+    <div class="bar" style="margin-top:12px"><i style="width:${(state.cardIdx+1)/words.length*100}%"></i></div>
+  </div>
+
+  <div class="fc-stage">
+    <div class="fc ${state.flipped?'flip':''}" id="fc">
+      <div class="fc-face fc-front">
+        <div class="big">${esc(w.en)}</div>
+        <div class="pr">${esc(w.pr || '')}</div>
+        <div class="hint">برای دیدن معنی کلیک کنید · <span class="en">Space</span></div>
+      </div>
+      <div class="fc-face fc-back">
+        <button class="spk2" id="fcSpeak" title="تلفظ">🔊</button>
+        <div class="big">${esc(w.fa)}</div>
+        <div class="ex">
+          <span class="en">${esc(w.ex)}</span>
+          ${w.exFa?`<span style="opacity:.85">${esc(w.exFa)}</span>`:''}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fc-meta">
+    <span>${done? '✅ این واژه را آموخته‌اید' : '◻️ هنوز آموخته نشده'}</span>
+    <span>کلیدها: <span class="en">Space</span> / <span class="en">1 2 3</span></span>
+  </div>
+
+  <div class="fc-controls">
+    <button class="btn ghost sm" id="prevBtn">‹ قبلی</button>
+    <button class="btn sm grade-again" id="againBtn">دوباره (۱)</button>
+    <button class="btn sm grade-good" id="goodBtn">خوب (۲)</button>
+    <button class="btn sm grade-easy" id="easyBtn">آسان (۳)</button>
+    <button class="btn ghost sm" id="nextBtn">بعدی ›</button>
+  </div>`;
+
+  app.querySelectorAll('[data-src]').forEach(b=>b.onclick=()=>{
+    state.cardSource = b.dataset.src; state.cardIdx = 0; state.flipped = false; renderCards();
+  });
+
+  const fc = $('#fc');
+  fc.onclick = (e)=>{ if(e.target.id!=='fcSpeak'){ state.flipped=!state.flipped; fc.classList.toggle('flip', state.flipped); } };
+  $('#fcSpeak').onclick = e=>{ e.stopPropagation(); speak(w.en); };
+
+  $('#prevBtn').onclick = ()=>{ state.cardIdx=(state.cardIdx-1+words.length)%words.length; state.flipped=false; renderCards(); };
+  $('#nextBtn').onclick = ()=>{ state.cardIdx=(state.cardIdx+1)%words.length; state.flipped=false; renderCards(); };
+  $('#againBtn').onclick = ()=>grade(0);
+  $('#goodBtn').onclick  = ()=>grade(1);
+  $('#easyBtn').onclick  = ()=>grade(2);
+
+  function grade(kind){
+    if(kind>0){
+      if(source==='504'){ if(!isLearned504(w.en)) toggle504(w.en); }
+      else { if(!isLearned(state.level, w.en)) toggleLearned(state.level, w.en); }
+    }
+    if(kind>0) speak(w.en);
+    state.cardIdx = (state.cardIdx+1)%words.length;
+    state.flipped = false;
+    renderCards();
+    if(kind>0) toast(kind===2?'آفرین! 👏':'خوب بود');
+  }
+
+  document.onkeydown = (e)=>{
+    if(state.view!=='cards') return;
+    if(e.code==='Space'){ e.preventDefault(); state.flipped=!state.flipped; fc.classList.toggle('flip', state.flipped); }
+    else if(e.key==='1') grade(0);
+    else if(e.key==='2') grade(1);
+    else if(e.key==='3') grade(2);
+    else if(e.key==='ArrowRight'){ state.cardIdx=(state.cardIdx-1+words.length)%words.length; state.flipped=false; renderCards(); }
+    else if(e.key==='ArrowLeft'){ state.cardIdx=(state.cardIdx+1)%words.length; state.flipped=false; renderCards(); }
+  };
+}
+
+/* ---------- QUIZ ---------- */
+function buildQuiz(){
+  const lv = state.level;
+  const words = VOCAB[lv];
+  const qs = [];
+
+  shuffle(words).slice(0, Math.min(5, words.length)).forEach(w=>{
+    const others = shuffle(words.filter(x=>x!==w)).slice(0,3);
+    const opts = shuffle([w, ...others]).map(o=>({text:o.fa, lang:'fa'}));
+    qs.push({type:'mc', prompt:'معنی این واژه چیست؟', word:w.en, lang:'en', speak:w.en, options:opts, answer:w.fa});
+  });
+
+  shuffle(words).slice(0, Math.min(4, words.length)).forEach(w=>{
+    const others = shuffle(words.filter(x=>x!==w)).slice(0,3);
+    const opts = shuffle([w, ...others]).map(o=>({text:o.en, lang:'en'}));
+    qs.push({type:'mc', prompt:'معادل انگلیسی این واژه کدام است؟', word:w.fa, lang:'fa', options:opts, answer:w.en});
+  });
+
+  shuffle(words).filter(w=> w.ex.toLowerCase().includes(w.en.toLowerCase())).slice(0,3).forEach(w=>{
+    const blanked = w.ex.replace(new RegExp(w.en.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'i'), '_____');
+    const others = shuffle(words.filter(x=>x!==w)).slice(0,3);
+    const opts = shuffle([w, ...others]).map(o=>({text:o.en, lang:'en'}));
+    qs.push({type:'mc', prompt:'جای خالی را پر کنید:', word:blanked, lang:'en', options:opts, answer:w.en});
+  });
+
+  // 504 words mixed in
+  shuffle(W504).slice(0,3).forEach(w=>{
+    const others = shuffle(W504.filter(x=>x!==w)).slice(0,3);
+    const opts = shuffle([w, ...others]).map(o=>({text:o.fa, lang:'fa'}));
+    qs.push({type:'mc', prompt:'معنی این واژهٔ ۵۰۴ چیست؟', word:w.en, lang:'en', speak:w.en, options:opts, answer:w.fa});
+  });
+
+  shuffle(GRAMMAR_Q[lv]).slice(0,4).forEach(g=>{
+    const opts = shuffle(g.o).map(o=>({text:o, lang:'en'}));
+    qs.push({type:'mc', prompt:'گزینهٔ درست را انتخاب کنید:', word:g.q, lang:'en', options:opts, answer:g.a});
+  });
+
+  return shuffle(qs).slice(0,14);
+}
+
+function renderQuiz(){
+  if(!state.quiz){
+    app.innerHTML = `
+    <div class="card" style="text-align:center;padding:38px 24px">
+      <div style="font-size:44px;margin-bottom:10px">✍️</div>
+      <h2 class="sec">آزمون سطح ${state.level}</h2>
+      <p class="sub">۱۴ سؤال ترکیبی: واژگان سطح، ۵۰۴ واژه، جای خالی و گرامر</p>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px">
+        <button class="btn" id="startQuiz">شروع آزمون</button>
+        <button class="btn ghost" id="startQuizShort">آزمون کوتاه (۷ سؤال)</button>
+      </div>
+      ${state.progress.best[state.level]!=null ? `<p style="margin-top:18px;color:var(--muted);font-size:13.5px">بهترین نمرهٔ شما در این سطح: <b style="color:var(--accent)">${state.progress.best[state.level]}%</b></p>`:''}
+    </div>`;
+    $('#startQuiz').onclick = ()=>{ state.quiz = {qs:buildQuiz(), i:0, score:0, answered:false, picked:null}; renderQuiz(); };
+    $('#startQuizShort').onclick = ()=>{ state.quiz = {qs:buildQuiz().slice(0,7), i:0, score:0, answered:false, picked:null}; renderQuiz(); };
+    return;
+  }
+
+  const q = state.quiz;
+  if(q.i >= q.qs.length){ renderResult(); return; }
+
+  const cur = q.qs[q.i];
+  const pct = q.i/q.qs.length*100;
+
+  app.innerHTML = `
+  <div class="progress-line"><i style="width:${pct}%"></i></div>
+  <div class="q-head">
+    <span>سؤال ${q.i+1} از ${q.qs.length}</span>
+    <span>امتیاز: <b style="color:var(--accent);font-family:Inter">${q.score}</b></span>
+  </div>
+  <div class="card">
+    <p style="color:var(--muted);font-size:13px;font-weight:600;margin-bottom:8px">${esc(cur.prompt)}</p>
+    <div class="q-text">
+      ${cur.lang==='en'
+        ? `<span class="en" style="font-size:${cur.type==='mc'&&cur.word.length>40?'16px':'22px'}">${esc(cur.word)}</span>`
+        : `<span>${esc(cur.word)}</span>`}
+      ${cur.speak? `<button class="spk sm" data-say="${esc(cur.speak)}" style="margin-inline-start:10px;vertical-align:middle">🔊</button>`:''}
+    </div>
+    <div id="opts">
+      ${cur.options.map((o,idx)=>`
+        <button class="opt" data-opt="${idx}">
+          <span class="k">${'ABCD'[idx]}</span>
+          <span class="${o.lang==='en'?'en':''}">${esc(o.text)}</span>
+        </button>`).join('')}
+    </div>
+    <div id="fb"></div>
+  </div>`;
+
+  app.querySelectorAll('[data-say]').forEach(b=>b.onclick=()=>speak(b.dataset.say));
+
+  const btns = [...app.querySelectorAll('.opt')];
+  btns.forEach(b=>{
+    b.onclick = ()=>{
+      if(state.quiz.answered) return;
+      state.quiz.answered = true;
+      const idx = +b.dataset.opt;
+      const picked = cur.options[idx].text;
+      const correct = picked === cur.answer;
+
+      btns.forEach((bb,k)=>{
+        bb.classList.add('locked');
+        const t = cur.options[k].text;
+        if(t === cur.answer) bb.classList.add('correct');
+        else if(k===idx) bb.classList.add('wrong');
+      });
+
+      if(correct){ state.quiz.score++; }
+      if(cur.answer && /^[a-zA-Z'’\- ]+$/.test(cur.answer)) speak(cur.answer);
+
+      $('#fb').innerHTML = correct
+        ? `<div class="feedback ok">✅ آفرین! پاسخ درست بود.</div>
+           <div style="margin-top:14px;text-align:left"><button class="btn" id="nextQ">سؤال بعدی →</button></div>`
+        : `<div class="feedback no">❌ نادرست. پاسخ درست: <span class="en" style="margin-inline-start:6px">${esc(cur.answer)}</span></div>
+           <div style="margin-top:14px;text-align:left"><button class="btn" id="nextQ">سؤال بعدی →</button></div>`;
+
+      $('#nextQ').onclick = ()=>{
+        state.quiz.i++; state.quiz.answered=false;
+        renderQuiz();
+      };
+    };
+  });
+}
+
+function renderResult(){
+  const q = state.quiz;
+  const pct = Math.round(q.score/q.qs.length*100);
+  const prev = state.progress.best[state.level];
+  if(prev==null || pct>prev){ state.progress.best[state.level] = pct; save(); }
+
+  let msg, emoji;
+  if(pct>=90){ msg='فوق‌العاده! تسلط شما چشمگیر است.'; emoji='🏆'; }
+  else if(pct>=70){ msg='خیلی خوب! کمی تمرین بیشتر و عالی می‌شوید.'; emoji='👏'; }
+  else if(pct>=50){ msg='قابل قبول. درس‌ها را مرور کنید.'; emoji='📖'; }
+  else { msg='نیاز به تمرین بیشتری دارید. ناامید نشوید!'; emoji='💪'; }
+
+  app.innerHTML = `
+  <div class="card result-hero">
+    <div style="font-size:46px;margin-bottom:6px">${emoji}</div>
+    <div class="score">${pct}%</div>
+    <div class="msg">${msg}</div>
+    <p style="color:var(--muted);font-size:14px">${q.score} پاسخ درست از ${q.qs.length} سؤال</p>
+    ${prev!=null ? `<p style="color:var(--muted);font-size:13px;margin-top:4px">بهترین نمرهٔ قبلی: ${prev}%</p>`:''}
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px">
+      <button class="btn" id="retry">آزمون دوباره</button>
+      <button class="btn ghost" id="toVocab">مرور واژگان</button>
+      <button class="btn ghost" id="toGrammar">مرور گرامر</button>
+    </div>
+  </div>`;
+  $('#retry').onclick = ()=>{ state.quiz={qs:buildQuiz(),i:0,score:0,answered:false,picked:null}; renderQuiz(); };
+  $('#toVocab').onclick = ()=>{ state.view='vocab'; render(); };
+  $('#toGrammar').onclick = ()=>{ state.view='grammar'; render(); };
+}
+
+/* ---------- SOUNDS ---------- */
+function renderSounds(){
+  app.innerHTML = `
+  <div class="card" style="padding:16px 18px">
+    <h2 class="sec" style="margin:0">آزمایشگاه تلفظ 🔊</h2>
+    <p class="sub" style="margin:6px 0 0">صداهایی که در فارسی وجود ندارند یا فرقشان را نمی‌شنویم — بزرگ‌ترین منبع «لهجهٔ فارسی» در انگلیسی. روی هر کلمه بزنید تا تلفظش را بشنوید.</p>
+  </div>
+  ${SOUNDS.map((s,i)=>`
+    <div class="acc snd ${state.soundsOpen===i?'open':''}" data-snd="${i}">
+      <button class="acc-h">
+        <span class="ipa">${esc(s.ipa)}</span>
+        <span style="font-size:15px">${esc(s.title)}</span>
+        <span class="arw" style="margin-inline-start:auto">▼</span>
+      </button>
+      <div class="acc-b">
+        <div class="acc-inner">
+          <p><b>چرا برای فارسی‌زبانان سخت است؟</b> ${esc(s.fa)}</p>
+          <div class="ok-box">💡 <b>راه‌حل:</b> ${esc(s.tip)}</div>
+          <p style="margin-top:14px"><b>جفت‌های کمینه — روی هر کلمه بزنید:</b></p>
+          <div class="pairs">
+            ${s.pairs.map(p=>`
+              <div class="pair">
+                <span class="w" data-say="${esc(p.a)}">${esc(p.a)}</span>
+                <span class="vs">≠</span>
+                <span class="w" data-say="${esc(p.b)}" style="color:var(--muted)">${esc(p.b)}</span>
+                <span class="gloss">${esc(p.g)}</span>
+              </div>`).join('')}
+          </div>
+        </div>
+      </div>
+    </div>`).join('')}
+
+  <div class="card">
+    <h2 class="sec">📌 نکتهٔ کلی برای فارسی‌زبانان</h2>
+    <p style="font-size:14px;margin-top:8px">فارسی زبانی است که هر هجا را کامل و واضح تلفظ می‌کند و ساختار خوشه‌ای در آغاز کلمه ندارد. انگلیسی برعکس، هجاها را می‌خورد و صداها را در هم می‌آمیزد. بزرگ‌ترین کلید بهبود لهجه، تمرین <b>استرس کلمه</b> و <b>واکهٔ خنثی /ə/</b> است — نه فقط تلفظ تکی صداها.</p>
+  </div>`;
+
+  app.querySelectorAll('[data-snd]').forEach(el=>{
+    el.querySelector('.acc-h').onclick = ()=>{
+      const i = +el.dataset.snd;
+      state.soundsOpen = state.soundsOpen===i ? -1 : i;
+      renderSounds();
+    };
+  });
+  app.querySelectorAll('[data-say]').forEach(b=>b.onclick = e=>{ e.stopPropagation(); speak(b.dataset.say); });
+}
+
+/* ---------- STATS ---------- */
+function renderStats(){
+  const totalWords = LEVELS.reduce((s,l)=>s+VOCAB[l].length,0);
+  const totalLearned = LEVELS.reduce((s,l)=>s+learnedList(l).length,0);
+  const overall = Math.round(totalLearned/totalWords*100);
+  const quizzes = LEVELS.filter(l=>state.progress.best[l]!=null).length;
+  const w504pct = Math.round(w504Learned().length/504*100);
+
+  app.innerHTML = `
+  <div class="card" style="padding:16px 18px">
+    <h2 class="sec" style="margin:0">پیشرفت شما 📊</h2>
+    <p class="sub" style="margin:6px 0 0">همهٔ داده‌ها در همین مرورگر ذخیره می‌شوند</p>
+  </div>
+
+  <div class="stat-grid">
+    <div class="stat"><b>${overall}%</b><span>پیشرفت واژگان سطحی</span></div>
+    <div class="stat"><b>${w504pct}%</b><span>پیشرفت ۵۰۴ واژه (${w504Learned().length}/504)</span></div>
+    <div class="stat"><b>${totalLearned}</b><span>واژهٔ سطحی از ${totalWords}</span></div>
+    <div class="stat"><b>${quizzes}/${LEVELS.length}</b><span>سطح آزمون‌داده‌شده</span></div>
+  </div>
+
+  <div class="card">
+    <h2 class="sec">تفکیک بر اساس سطح</h2>
+    <p class="sub">درصد واژگانی که «آموختم» علامت زده‌اید</p>
+    <div class="pgrid">
+      ${LEVELS.map(l=>{
+        const p = levelPct(l);
+        const b = state.progress.best[l];
+        return `<div class="prow">
+          <span class="lbl">${l}</span>
+          <div class="bar"><i style="width:${p.pct}%"></i></div>
+          <span class="val">${p.pct}%</span>
+        </div>
+        <div style="font-size:12px;color:var(--muted);margin:-6px 0 10px 47px">
+          ${LEVEL_NAMES[l]} — ${p.done}/${p.total} واژه · ${b!=null?`بهترین آزمون: <b style="color:var(--accent);font-family:Inter">${b}%</b>`:'آزمون نداده‌اید'}
+        </div>`;
+      }).join('')}
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 class="sec">⭐ ۵۰۴ واژهٔ ضروری</h2>
+    <div class="bar"><i style="width:${w504pct}%"></i></div>
+    <p style="font-size:13.5px;color:var(--muted);margin-top:10px">${w504Learned().length} از ۵۰۴ واژه آموخته شده — ${504-w504Learned().length} واژه باقی مانده است.</p>
+  </div>
+
+  <div class="card">
+    <h2 class="sec">توصیهٔ بعدی</h2>
+    <p style="font-size:14px;margin-top:8px">${nextAdvice()}</p>
+    <div style="margin-top:14px"><button class="btn ghost" id="resetBtn">پاک کردن همهٔ پیشرفت</button></div>
+  </div>`;
+
+  $('#resetBtn').onclick = ()=>{
+    if(confirm('مطمئنید؟ تمام پیشرفت شما پاک خواهد شد.')){
+      state.progress = {learned:{}, best:{}, w504:[]};
+      LEVELS.forEach(l=>state.progress.learned[l]=[]);
+      save(); render(); toast('پیشرفت پاک شد');
+    }
+  };
+}
+
+function nextAdvice(){
+  const w504pct = w504Learned().length/504;
+  for(const l of LEVELS){
+    const p = levelPct(l);
+    if(p.pct < 60) return `سطح <b>${l} (${LEVEL_NAMES[l]})</b> را کامل کنید — ${p.total-p.done} واژهٔ باقی‌مانده دارید. پس از رسیدن به ۶۰٪، آزمون این سطح را بدهید.`;
+    if(state.progress.best[l]==null) return `واژگان سطح <b>${l}</b> را خوب یاد گرفته‌اید! حالا یک <b>آزمون</b> از این سطح بدهید تا گرامرتان هم سنجیده شود.`;
+  }
+  if(w504pct < 0.7) return `واژگان سطحی را تمام کرده‌اید. حالا روی <b>۵۰۴ واژهٔ ضروری</b> تمرکز کنید — هنوز ${504-w504Learned().length} واژه باقی مانده است.`;
+  return `شما در همهٔ سطوح و ۵۰۴ واژه پیشرفت خوبی داشته‌اید. 🎉 حالا روی <b>مهارت‌های تولیدی</b> تمرکز کنید: نوشتن متن‌های کوتاه، توصیف تصاویر به انگلیسی، و صحبت کردن روزانه ۵ دقیقه با خودتان.`;
+}
+
+/* ============================================================
+   12. INIT
+   ============================================================ */
+if(!state.cardSource) state.cardSource = 'vocab';
+render();
+</script>
+</body>
+</html>
